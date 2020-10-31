@@ -1,0 +1,390 @@
+page {
+    background-color: rgba(243, 243, 243, 1);
+}
+
+.top {
+    width: 100%;
+    height: 180rpx;
+    background-color: white;
+    margin-top: 10rpx;
+    position: relative;
+}
+
+.medal {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    top: 140rpx;
+    left: 130rpx;
+}
+
+.store {
+    width: 94%;
+    height: 200rpx;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    position: relative;
+}
+
+.store_img {
+    width: 120rpx;
+    height: 120rpx;
+
+}
+
+.store_name {
+    margin-left: 25rpx;
+
+}
+
+.store_text {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.guanzhu {
+    position: absolute;
+    width: 120rpx;
+    height: 40rpx;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 40rpx;
+    border-radius: 20rpx;
+    right: 30rpx;
+    top: 40rpx;
+    color: rgba(223, 79, 101, 1);
+    background-color: white;
+    border: 1px solid rgba(223, 79, 101, 1);
+}
+
+.text {
+    width: 100%;
+    background-color: white;
+    margin-top: 20rpx;
+    position: relative;
+    padding-bottom: 50rpx;
+
+}
+
+.text_title {
+    width: 94%;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin: auto;
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-top: 30rpx;
+}
+
+.texts {
+    width: 94%;
+    font-size: 22rpx;
+    color: rgba(102, 102, 102, 1);
+    margin: auto;
+    margin-top: 20rpx;
+
+}
+
+.off {
+    position: absolute;
+    width: 100rpx;
+    height: 30rpx;
+    font-size: 28rpx;
+    color: rgba(57, 147, 216, 1);
+    bottom: 50rpx;
+    right: 30rpx;
+}
+
+.goods_img {
+    width: 100%;
+    height: 660rpx;
+
+}
+
+.swiper-item {
+    width: 100%;
+    height: 100%;
+}
+
+.down {
+    width: 100%;
+    height: 60rpx;
+    background-color: rgba(248, 229, 231, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.big {
+    font-size: 32rpx;
+    font-weight: bold;
+
+}
+
+.yanzheng {
+    width: 100%;
+    height: 145rpx;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buy {
+    width: 100%;
+    height: 100rpx;
+    background-color: white;
+    position: relative;
+    padding-top: 20rpx;
+
+}
+
+.buy_btn {
+    width: 94%;
+    height: 80rpx;
+    background-color: rgba(233, 59, 68, 1);
+    margin: auto;
+    font-size: 30rpx;
+    color: white;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 8rpx;
+}
+
+.buy_right {
+    position: absolute;
+    width: 100rpx;
+    height: 30rpx;
+    border-radius: 15rpx 0 15rpx 15rpx 0;
+    text-align: center;
+    line-height: 30rpx;
+    font-size: 24rpx;
+    color: rgba(233, 59, 68, 1);
+    background-color: rgba(235, 218, 79, 1);
+    top: 30rpx;
+    right: 24%;
+}
+
+.good_names {
+    width: 100%;
+    height: 110rpx;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20rpx;
+}
+
+.good_shoucang {
+    width: 100rpx;
+    text-align: center;
+    margin-right: 30rpx;
+}
+
+.goods_text {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.goods_information {
+    width: 100%;
+    background-color: white;
+    color: rgb(145, 144, 144);
+}
+
+.goods_text_text {
+    width: 90%;
+    margin: auto;
+    height: 30rpx;
+    font-size: 24rpx;
+}
+
+.zhuan {
+    float: left;
+    text-decoration: line-through;
+}
+
+.serve {
+    width: 90%;
+    height: 30rpx;
+    margin: auto;
+    font-size: 24rpx;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.lookAll {
+    width: 94%;
+    height: 100rpx;
+    margin: auto;
+    background-color: rgba(246, 246, 246, 1);
+    border-bottom: none;
+    text-align: center;
+    line-height: 100rpx;
+    color: rgba(65, 150, 245, 1);
+    font-size: 24rpx;
+}
+
+.store_xinxi {
+    width: 100%;
+    height: 120rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+.xinxi_list {
+    height: 100rpx;
+    text-align: center;
+
+}
+
+.shuoming {
+    width: 100%;
+    height: 240rpx;
+    background-color: white;
+    margin-top: 10rpx;
+    padding-bottom: 250rpx;
+}
+
+.shuoming_top {
+    width: 94%;
+    height: 70rpx;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(227, 227, 227, 1);
+
+}
+
+.shuoming_list {
+    width: 92%;
+    height: 180rpx;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.shuoming_text {
+    width: 94%;
+    margin: auto;
+    font-size: 26rpx;
+    padding-bottom: 30rpx;
+}
+
+.bottom {
+    width: 100%;
+    height: 120rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid rgba(246, 246, 246, 1);
+}
+
+.bottom_right {
+    width: 60%;
+    height: 80rpx;
+    position: relative;
+
+}
+
+.bottom_btn {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 80rpx;
+    color: white;
+    border-radius: 6rpx;
+}
+
+.bottom_right_right {
+    position: absolute;
+    width: 100rpx;
+    height: 30rpx;
+    border-radius: 15rpx 0 15rpx 15rpx 0;
+    text-align: center;
+    line-height: 30rpx;
+    font-size: 24rpx;
+    color: rgba(233, 59, 68, 1);
+    background-color: rgba(235, 218, 79, 1);
+    top: 10rpx;
+    right: 7%;
+}
+
+.up {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(97, 97, 97, 0.295);
+    display: flex;
+    align-items: flex-end;
+    z-index: 1000000000;
+
+}
+
+.up_buy {
+    width: 100%;
+    height: 50%;
+    background-color: white;
+    position: relative;
+}
+
+.up_off {
+    position: absolute;
+    right: 30rpx;
+    top: 30rpx;
+}
+
+.up_btn {
+    width: 94%;
+    height: 80rpx;
+    position: absolute;
+    left: 3%;
+    bottom: 50rpx;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 80rpx;
+    background-color: red;
+    color: white;
+    border-radius: 6rpx;
+
+}
+
+.up_top {
+    width: 94%;
+    height: 220rpx;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: absolute;
+    top: 50rpx;
+    left: 3%;
+}
+
+.buy_num {
+    width: 96%;
+    height: 50rpx;
+    position: absolute;
+    left: 3%;
+    top: 320rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

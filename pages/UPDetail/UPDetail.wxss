@@ -1,0 +1,22 @@
+page {
+    background-color: rgba(243, 243, 243, 1);
+}
+
+.user {
+    width: 100%;
+    height: 300rpx;
+    background-color: white;
+    text-align: center;
+    position: relative;
+}
+.guanzhu{
+    width: 120rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 100rpx;
+    right:100rpx;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 40rpx;
+    border-radius: 20rpx;
+}

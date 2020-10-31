@@ -1,0 +1,207 @@
+page {
+    background-color: rgba(247, 247, 247, 1);
+}
+
+.afterSale {
+    width: 100%;
+    height: 100%;
+}
+
+.top {
+    widows: 100%;
+    height: 150rpx;
+    background-color: white;
+    margin-top: 30rpx;
+}
+
+.top_title {
+    width: 94%;
+    height: 50rpx;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    margin: auto;
+    margin-top: 20rpx;
+}
+
+.top_select {
+    width: 94%;
+    height: 50rpx;
+    margin: auto;
+    font-size: 28rpx;
+    margin-top: 30rpx;
+}
+
+.pay_list {
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.center {
+    width: 100%;
+    height: 300rpx;
+    background-color: white;
+    margin-top: 30rpx;
+}
+
+.center_title {
+    width: 94%;
+    height: 80rpx;
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    border-bottom: 1px solid rgba(247, 247, 247, 1);
+}
+
+.center_img {
+    width: 94%;
+    height: 200rpx;
+    margin: auto;
+    margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-self: start;
+
+}
+
+.add_img {
+    width: 150rpx;
+    height: 150rpx;
+    margin-left: 20rpx;
+}
+
+.imgs {
+    height: 150rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img_list {
+    width: 150rpx;
+    height: 150rpx;
+    position: relative;
+    margin-left: 15rpx;
+    margin-right: 15rpx;
+}
+
+.jian {
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    top: -20rpx;
+    right: -20rpx;
+}
+
+.btn {
+    width: 96%;
+    height: 100rpx;
+    font-size: 34rpx;
+    text-align: center;
+    line-height: 100rpx;
+    color: white;
+    margin: auto;
+    border-radius: 10rpx;
+    margin-top: 50rpx;
+
+}
+
+.bottom {
+    width: 100%;
+    height: 200rpx;
+    background-color: white;
+    margin-top: 30rpx;
+    position: relative;
+}
+
+.bottom_list {
+    width: 94%;
+    height: 100rpx;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28rpx;
+
+}
+
+.submit {
+    width: 94%;
+    height: 80rpx;
+    position: absolute;
+    bottom: 50rpx;
+    left: 3%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 80rpx;
+    margin-top: 200rpx;
+    border-radius: 8rpx;
+}
+
+.dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(73, 73, 73, 0.253);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+}
+
+.dialog_select {
+    width: 100%;
+    height: 65%;
+    background-color: rgba(247, 247, 247, 1);
+    position: relative;
+}
+
+.dialog_select_top {
+    width: 100%;
+    height: 80rpx;
+    font-size: 30rpx;
+    background-color: rgba(247, 247, 247, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.dialog_select_list {
+    width: 100%;
+    height: 560rpx;
+    background-color: white;
+
+}
+
+.dialog_list {
+    width: 94%;
+    height: 70rpx;
+    margin: auto;
+    font-size: 28rpx;
+    border-bottom: 1px solid rgba(247, 247, 247, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.submits{
+    width: 94%;
+    height: 80rpx;
+    position: absolute;
+    bottom: 40rpx;
+    left: 3%;
+    font-size: 30rpx;
+    color: white;
+    background-color: red;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 8rpx;
+}

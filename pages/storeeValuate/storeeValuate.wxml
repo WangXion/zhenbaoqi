@@ -1,0 +1,22 @@
+<view class="storeeValuate">
+    <view class="select">
+        <view class="select_top">
+            <view style="font-size: 30rpx;font-weight: bold;">大家都认为</view>
+        </view>
+        <view class="select_list">
+            <view class="list" wx:for="{{select}}" wx:key="index" style="background:rgba(249, 231, 227, 1);color:red;">
+                捡到宝了(10)
+            </view>
+        </view>
+    </view>
+    <view class="select" style="margin-top:30rpx">
+        <view class="select_top">
+            <view style="font-size: 30rpx;font-weight: bold;">好评不断</view>
+        </view>
+        <view class="select_list">
+            <view class="list" wx:for="{{select}}" wx:key="index" style="background:rgba(248, 248, 248, 1);color:rgba(158, 158, 158, 1);">
+                捡到宝了(10)
+            </view>
+        </view>
+    </view>
+</view>

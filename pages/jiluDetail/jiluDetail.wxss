@@ -1,0 +1,468 @@
+page {
+    background-color: rgba(243, 243, 243, 1);
+}
+
+.top {
+    width: 100%;
+    height: 200rpx;
+    background-color: white;
+}
+
+.store {
+    width: 94%;
+    height: 200rpx;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    position: relative;
+}
+
+.store_img {
+    width: 120rpx;
+    height: 120rpx;
+    position: relative;
+}
+
+.store_v {
+    position: absolute;
+    width: 30rpx;
+    height: 30rpx;
+    bottom: -12rpx;
+    right: -7rpx;
+}
+
+.store_name {
+    margin-left: 25rpx;
+
+}
+
+.store_text {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 10rpx;
+}
+
+.zhi {
+    width: 30rpx;
+    height: 30rpx;
+    font-size: 20rpx;
+    text-align: center;
+    line-height: 30rpx;
+    color: rgba(233, 59, 68, 1);
+    border: 1px solid rgba(233, 59, 68, 1);
+    border-radius: 50%;
+    float: left;
+    margin-top: 3rpx;
+}
+
+.xin {
+    width: 30rpx;
+    height: 30rpx;
+    text-align: center;
+    line-height: 30rpx;
+    font-size: 30rpx;
+    color: rgba(233, 59, 68, 1);
+    float: left;
+    margin-top: 5rpx;
+    margin-right: 10rpx;
+}
+
+.guanzhu {
+    position: absolute;
+    width: 140rpx;
+    height: 50rpx;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 50rpx;
+    border-radius: 25rpx;
+    right: 30rpx;
+    top: 40rpx;
+}
+
+.text {
+    width: 100%;
+    background-color: white;
+    margin-top: 20rpx;
+    position: relative;
+    padding-bottom: 50rpx;
+
+}
+
+.text_title {
+    width: 94%;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin: auto;
+    font-size: 32rpx;
+    font-weight: bold;
+}
+
+.texts {
+    width: 94%;
+    font-size: 22rpx;
+    color: rgba(102, 102, 102, 1);
+    margin: auto;
+    margin-top: 20rpx;
+
+}
+
+.off {
+    position: absolute;
+    width: 100rpx;
+    height: 30rpx;
+    font-size: 28rpx;
+    color: rgba(57, 147, 216, 1);
+    bottom: 50rpx;
+    right: 30rpx;
+}
+
+.swiper {
+    width: 100%;
+    height: 1020rpx;
+
+}
+
+.clock {
+    width: 30rpx;
+    height: 30rpx;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 23rpx;
+    background-color: rgba(232, 87, 104, 1);
+    color: rgba(248, 229, 231, 1);
+    border-radius: 50%;
+    float: left;
+    margin-top: 10rpx;
+}
+
+.down {
+    width: 100%;
+    height: 60rpx;
+    background-color: rgba(248, 229, 231, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.big {
+    font-size: 32rpx;
+    font-weight: bold;
+
+}
+
+.yanzheng {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buy {
+    width: 100%;
+    height: 100rpx;
+    background-color: white;
+    position: relative;
+    padding-top: 10rpx;
+
+}
+
+.buy_btn {
+    width: 94%;
+    height: 80rpx;
+    background-color: rgba(233, 59, 68, 1);
+    margin: auto;
+    font-size: 30rpx;
+    color: white;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 8rpx;
+}
+
+.buy_right {
+    position: absolute;
+    width: 100rpx;
+    height: 30rpx;
+    border-radius: 50rpx 40rpx 40rpx 15rpx;
+    text-align: center;
+    line-height: 30rpx;
+    font-size: 24rpx;
+    color: rgba(233, 59, 68, 1);
+    background-color: rgba(235, 218, 79, 1);
+    top: 30rpx;
+    right: 24%;
+}
+
+.statistics {
+    width: 100%;
+    height: 80rpx;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.statistics_left {
+    margin-left: 30rpx;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.shuaxin {
+    width: 150rpx;
+    height: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.statistics_num {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 15rpx;
+}
+
+.statistics_num_list {
+    width: 140rpx;
+    height: 50rpx;
+    font-size: 24rpx;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: rgba(102, 102, 102, 1);
+}
+
+.statistics_num_title {
+    width: 30rpx;
+    height: 34rpx;
+    font-size: 26;
+    border: 1px solid red;
+    border-radius: 6rpx;
+    margin-right: 8rpx;
+    color: red;
+    text-align: center;
+    line-height: 34rpx;
+}
+
+.statistics_right {
+    width: 50rpx;
+    height: 60rpx;
+    font-size: 24rpx;
+    margin-right: 30rpx;
+}
+
+.people {
+    width: 100%;
+    background-color: white;
+    padding-top: 30rpx;
+    padding-bottom: 30rpx;
+
+}
+
+.people_list {
+    width: 94%;
+    height: 120rpx;
+    margin: auto;
+    border-bottom: 1px solid rgba(182, 182, 182, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(246, 246, 246, 1);
+}
+
+.people_list_left {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 20rpx;
+
+}
+
+.user_class {
+    width: 85rpx;
+    height: 30rpx;
+    font-size: 20rpx;
+    text-align: center;
+    line-height: 30rpx;
+    color: white;
+    border-radius: 6rpx;
+}
+
+.people_text {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+
+}
+
+.people_state {
+    width: 100rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    font-weight: bold;
+    margin-left: 45rpx;
+    margin-bottom: 15rpx;
+
+}
+
+.lookAll {
+    width: 94%;
+    height: 100rpx;
+    margin: auto;
+    background-color: rgba(246, 246, 246, 1);
+    border-bottom: none;
+    text-align: center;
+    line-height: 100rpx;
+    color: rgba(65, 150, 245, 1);
+    font-size: 24rpx;
+}
+
+.store_xinxi {
+    width: 100%;
+    height: 140rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+.xinxi_list {
+    height: 100rpx;
+    text-align: center;
+
+}
+
+.shuoming {
+    width: 100%;
+    height: 240rpx;
+    background-color: white;
+    margin-top: 30rpx;
+}
+
+.shuoming_top {
+    width: 94%;
+    height: 60rpx;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(227, 227, 227, 1);
+
+}
+
+.shuoming_list {
+    width: 92%;
+    height: 180rpx;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.bottom {
+    width: 100%;
+    height: 120rpx;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid rgba(246, 246, 246, 1);
+}
+
+.bottom_right {
+    width: 60%;
+    height: 80rpx;
+    position: relative;
+
+}
+
+.bottom_btn {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 80rpx;
+    color: white;
+    border-radius: 6rpx;
+}
+
+.bottom_right_right {
+    position: absolute;
+    width: 100rpx;
+    height: 30rpx;
+    border-radius: 50rpx 40rpx 40rpx 15rpx;
+    text-align: center;
+    line-height: 30rpx;
+    font-size: 24rpx;
+    color: rgba(233, 59, 68, 1);
+    background-color: rgba(235, 218, 79, 1);
+    top: 10rpx;
+    right: 7%;
+}
+
+.up {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.685);
+    display: flex;
+    align-items: flex-end;
+}
+
+.up_buy {
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    position: relative;
+}
+
+.up_off {
+    position: absolute;
+    right: 30rpx;
+    top: 30rpx;
+}
+
+.up_btn {
+    width: 94%;
+    height: 80rpx;
+    position: absolute;
+    left: 3%;
+    bottom: 50rpx;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 80rpx;
+    background-color: red;
+    color: white;
+    border-radius: 6rpx;
+
+}
+
+.up_border {
+    width: 25%;
+    height: 100rpx;
+    border: 1px solid red;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 200rpx;
+    left: 38%;
+}
+
+.up_border_right {
+    position: absolute;
+    right: 36.5%;
+    top: 200rpx
+}

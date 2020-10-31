@@ -1,0 +1,35 @@
+<view class="list">
+    <view class="search_hd">
+        <view class="search_hd_left" bindtap="goSearch">
+            <image style="width:40rpx;height:40rpx;display:block;margin-left:20rpx" src="../../static/images/search(3).png" />
+            <input type="text" class="search_input" disabled="{{true}}" placeholder=" 搜索热门文玩好物" />
+        </view>
+    </view>
+    <!-- 左侧导航 -->
+    <view class='tui-fixed-left'>
+        <scroll-view class='tui-city-scroll' scroll-x="true" scroll-y="true" style="height:92%;" scroll-with-animation="true" scroll-top="{{leftMenuTop}}">
+            <text class="menu-item {{index === currentActiveIndex ? 'menu-active' : ''}}" wx:for="{{goodList}}" wx:key="unique" data-index="{{index}}" id='{{index}}' catchtap='changeMenu'>
+                {{item.code_name}}
+            </text>
+        </scroll-view>
+    </view>
+    <!-- 右侧滚动商品 -->
+    <view class='content'>
+        <image style="width:96%;height:170rpx;display:block;margin:auto;" src="https://www.zbq888.cn/zhen_url/image/list_right_top.jpg" />
+        <scroll-view class='tui-city-scroll-y' scroll-y="true" style="height:75%;" scroll-with-animation="true" scroll-top="{{rightProTop}}" bindscroll="scroll">
+            <view class='pro-item' wx:for="{{goodList}}" wx:key="unique">
+                <view class='tui-list-head' id='NAV{{index}}'>
+                    ——
+                    <text style="color:black;">{{item.code_name}}</text>
+                    ——
+                </view>
+                <view class='tui-list-li'>
+                    <view class='goods-box' wx:for-item='items' wx:for="{{item.list}}" bindtap="goSearchs" data-text='{{items.code_name}}' data-fid="{{item.dict_id}}" data-ffid="{{items.parent_id}}"  data-cid="{{items.dict_id}}" wx:key="unique">
+                        <image class='goodsImg' src='{{items.code_value}}'></image>
+                        <view class='goodsName'>{{items.code_name}}</view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>

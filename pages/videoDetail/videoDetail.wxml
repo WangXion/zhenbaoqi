@@ -1,0 +1,38 @@
+<view class="video_container">
+  <!-- 组件接口参数描述 
+  player-type      播放器类型 默认是视频 live是直播 video是点播
+  fit-type         填充模式，参考小程序原生的填充模式 video(contain,cover) 
+                   live(contain，fillCrop,RTC)
+  video-list       视频数据列表
+  swipeDown      下滑事件
+  menuTap        按钮被点击的事件
+  swipeUpper     上滑事件
+  swipeToStart   上滑到第一条数据
+  swipeToEnd     下滑到最后一条数据 -->
+  <scroll-video player-type="{{playerType}}" bindtap="pinlunOFF"  video-list="{{videoList}}" fit-type="{{fitType}}" bind:menuTap="menuTap" bind:swipeDown="swipeDown" bind:swipeUpper="swipeUpper" bind:goUP="goUP" bind:swipeToStart="swipeToStart" bind:swipeToEnd="swipeToEnd" bind:guanZhus="guanZhus"></scroll-video>
+  <view class="pinglun" wx:if="{{pinlun}}">
+    <view class="pinglun_detail">
+      <view style="width:100%;height:80rpx;"></view>
+      <view class="pinglun_top">
+        <view style="flex:1;font-size:30rpx; text-align: center;">{{pinluns.length}}条评论</view>
+        <image style="width:30rpx;height:30rpx;" bindtap="pinlunOFF" src="../../static/images/off.png" />
+      </view>
+      <view class="pinglun_list">
+        <view class="list_detail" wx:for="{{pinluns}}" wx:key="index">
+          <image style="width:70rpx;height:70rpx; border-radius: 50%;margin-right:20rpx;" src="{{item.img}}" />
+          <view>
+            <view style="color:rgba(164, 164, 164, 1);">{{item.name}}</view>
+            <view>
+              {{item.text}}
+              <text style="margin-left:30rpx;color:rgba(164, 164, 164, 1)">{{item.time}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view style="width:100%;height:100rpx;"></view>
+      <view class="pinglun_input">
+        <input class="textarea" bindinput="shuRu" value="{{values}}" bindconfirm="send" adjust-position="{{false}}" maxlength="{{max}}" placeholder="有爱评论，说点好听点的~" />
+      </view>
+    </view>
+  </view>
+</view>

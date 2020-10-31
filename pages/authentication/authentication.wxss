@@ -1,0 +1,31 @@
+.authentication {
+    padding: 20rpx;
+}
+
+.input_title {
+    width: 96%;
+    height: 100rpx;
+    margin: auto;
+    font-size: 30rpx;
+    border-bottom: 1px solid rgb(247, 247, 247);
+}
+
+.btn {
+    width: 96%;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 32rpx;
+    color: white;
+    margin: auto;
+    margin-top: 100rpx;
+    border-radius: 10rpx;
+}
+
+.txt {
+    width: 96%;
+    font-size: 24rpx;
+    margin: auto;
+    color: rgba(60, 60, 60, 1);
+    margin-top: 20rpx;
+}

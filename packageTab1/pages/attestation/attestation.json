@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-progress": "../common/progress/index"
+  },
+  "navigationBarTitleText": "认证信息"
+}

@@ -1,0 +1,21 @@
+<view class="authentication">
+    <view class="input_title">
+        <view style="float:left;height:100%; line-height: 100rpx;margin-right:20rpx;">真实姓名</view>
+        <input style="height:100%" type="text" disabled="{{type==1?false :true}}" maxlength="8" value="{{name}}" bindinput="names" placeholder="请输入真实姓名" />
+    </view>
+    <view class="input_title" style="border-bottom:none">
+        <view style="float:left;line-height: 100rpx;margin-right:20rpx;">身份证号</view>
+        <input style="height:100%;" type="idcard" disabled="{{type==1?false :true}}" maxlength="18" value="{{card}}" bindinput="card" placeholder="请输入真实身份证号" />
+    </view>
+    <view class="btn" style="background:{{bgColor}}" bindtap="submit">
+        {{type==1?'提交认证':'已经实名认证'}}
+    </view>
+    <view class="txt">
+        <view>实名认证说明</view>
+        <view>1、请确保输入的姓名和身份证号为真实信息；</view>
+        <view>2、以上信息甄宝气承诺高度保密，仅限平台实名使用；</view>
+        <view>3、银行卡地区指该开户支行所属地区；</view>
+        <view>4、发货银行系统会依据银行卡卡号自动识别</view>
+        <view>5、以上信息甄宝气承诺高度保密，仅限平台实名使用。</view>
+    </view>
+</view>

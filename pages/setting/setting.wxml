@@ -1,0 +1,17 @@
+<view class="settting">
+    <view>
+        <view class="set_list">
+            <view class="title">推送消息</view>
+            <switch style="margin-right:20rpx;" checked="{{switch1Checked}}" bindchange="switch1Change" />
+        </view>
+        <view class="set_list" bindtap="clear" >
+            <view class="title">清除缓存</view>
+            <view class="title">{{num}}MB</view>
+        </view>
+        <view class="set_list">
+            <view class="title">当前版本</view>
+            <view class="title">V1.0.4</view>
+        </view>
+    </view>
+    <view class="btn" bindtap="logOut">退出登录</view>
+</view>

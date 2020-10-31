@@ -1,0 +1,135 @@
+page {
+    background-color: rgba(243, 243, 243, 1);
+}
+
+.kefu {
+    overflow: hidden;
+}
+
+.liaotian {
+    overflow: hidden;
+    margin-bottom: 200rpx;
+}
+
+.time {
+    width: 236rpx;
+    height: 40rpx;
+    margin: auto;
+    font-size: 24rpx;
+    color: white;
+    background-color: rgba(212, 213, 217, 1);
+    text-align: center;
+    line-height: 40rpx;
+    border-radius: 20rpx;
+    margin-top: 40rpx;
+}
+
+.tip {
+    width: 400rpx;
+    height: 40rpx;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 40rpx;
+    margin: auto;
+    background-color: rgba(212, 213, 217, 1);
+    color: white;
+    border-radius: 20rpx;
+    margin-top: 40rpx;
+}
+
+.jilu {
+    width: 100%;
+    overflow: auto;
+}
+
+.kf {
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    margin-top: 40rpx;
+    margin-left: 36rpx;
+}
+
+.mine {
+    width: 90%;
+    float: right;
+    margin-top: 40rpx;
+    margin-right: 36rpx;
+
+}
+
+.mine_counte {
+    width: 90%;
+
+}
+
+.text {
+    width: 65%;
+    padding: 20rpx;
+    font-size: 26rpx;
+    border-radius: 10rpx;
+
+}
+
+.shuru {
+    width: 100%;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+
+}
+
+.shuru_top {
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(82, 82, 82, 0.16);
+}
+
+.section {
+    width: 80%;
+    height: 80rpx;
+    border: 1px solid rgba(82, 82, 82, 0.16);
+    border-radius: 8rpx;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.textarea {
+    width: 96%;
+    margin: auto;  
+}
+
+.add {
+    width: 60rpx;
+    height: 60rpx;
+    font-size: 60rpx;
+    text-align: center;
+    line-height: 52rpx;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+
+.go {
+    width: 100rpx;
+    height: 80rpx;
+    background-color: rgba(140, 236, 114, 1);
+    color: white;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 25rpx;
+
+}
+
+.shuru_bottom {
+    width: 100%;
+    height: 300rpx;
+}

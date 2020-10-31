@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-tabs1": "../common/tabs1/index",
+    "i-tab1": "../common/tab1/index",
+    "i-tab-bar": "../common/tab-bar/index",
+    "i-tab-bar-item": "../common/tab-bar-item/index"
+  },
+  "navigationBarTitleText": "帮助中心"
+}

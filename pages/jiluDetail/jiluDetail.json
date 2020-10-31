@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-count-down": "../common/count-down/index"
+  },
+  "navigationBarTitleText": "详情"
+}

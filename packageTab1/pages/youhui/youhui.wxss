@@ -1,0 +1,82 @@
+page {
+    background-color: rgba(245, 245, 245, 1);
+}
+
+.youhui_top {
+    width: 100%;
+    height: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.list {
+    width: 100%;
+    height: 100%;
+    margin-top: 100rpx;
+    padding-bottom: 50rpx;
+}
+
+.list_detail {
+    width: 100%;
+    height: 100%;
+}
+
+.list_detail_list {
+    width: 94%;
+    height: 200rpx;
+    background-color: white;
+    margin: auto;
+    margin-top: 30rpx;
+    border-radius: 10rpx;
+    border: 1px solid rgba(234, 234, 234, 1);
+    position: relative;
+
+}
+
+.list_detail_list_top {
+    width: 100%;
+    height: 130rpx;
+    border-bottom: 1px dashed rgba(234, 234, 234, 1);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.list_detail_list_bottom {
+    width: 100%;
+    height: 70rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.youhui_state {
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    right: 30rpx;
+    bottom: 20rpx;
+}
+
+.bg {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.gosend {
+    width: 100rpx;
+    height: 46rpx;
+    font-size: 26rpx;
+    color: white;
+    background: red;
+    border-radius: 23rpx;
+    margin-right: 30rpx;
+    text-align: center;
+    line-height: 46rpx;
+}

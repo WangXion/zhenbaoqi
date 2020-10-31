@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-tabs": "../common/tabs/index",
+    "i-tab": "../common/tab/index"
+  },
+  "navigationBarTitleText": "余额与账单"
+}

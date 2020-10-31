@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "scroll-video": "../common/scroll-video/scroll-video"
+  },
+  "navigationBarTitleText": "视频详情"
+}

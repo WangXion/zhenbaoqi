@@ -1,0 +1,175 @@
+<view class="detail">
+  <view class="state">
+    <view style="color:rgba(255, 37, 37, 1); font-size: 36rpx;margin-left:20rpx;">
+      <image style="width:40rpx;height:36rpx;" src="../../static/images/cardDetail.png" /> 商品下单
+    </view>
+    <view style="color:rgba(136, 136, 136, 1);font-size: 24rpx;margin-right:20rpx;"></view>
+  </view>
+  <view class="user" bindtap="goSite">
+    <view class="user_top">
+      <view class="user_top_left">
+        <image wx:if="{{site.site_id==-100? false :true}}" style="width:40rpx;margin-right:10rpx;" mode="widthFix" src="../../static/images/dw.png" />
+        <view wx:if="{{site.site_id==-100? false :true}}">
+          收货人: {{site.site_name}} {{site.site_phone}}
+        </view>
+      </view>
+      <view style="margin-right:20rpx;color:blue;font-size: 26rpx;" wx:if="{{site.site_id==-100? false :true}}" catchtap="copyNum" data-text="{{site.site_detail}}" data-name="{{site.site_name}}" data-phone="{{site.site_phone}}">
+        复制信息
+      </view>
+    </view>
+    <view class="user_site" wx:if="{{site.site_id==-100? false :true}}">
+      收货地址: {{site.site_detail}}
+    </view>
+    <!-- <view class="user_yb" wx:if="{{site.site_id==-100? false :true}}">
+            邮编 {{site.site_youbian}}
+        </view> -->
+    <view class="set_site" wx:if="{{site.site_id==-100? true :false}}">点击设置收货地址</view>
+    <image style="width:100%;height:13rpx; position: absolute;bottom: 0;left: 0;" src="../../static/images/cardDetailBto.png" />
+  </view>
+  <view class="goods">
+    <view class="goods_top">商品信息</view>
+    <view class="goods_list">
+      <view wx:for="{{goods}}" class="list" wx:key="index">
+        <view class="good_img">
+          <image style="width:100%;height:100%;" mode="aspectFill" src="{{good_img}}" />
+        </view>
+        <view class="good_text">
+          <view class="good_name">{{good_name}}</view>
+          <view class="good_price">
+            <view>￥{{good_price}}</view>
+            <view style="color:rgba(136, 136, 136, 1)">数量X{{buyNum}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="texts">
+    <view class="goods_top">选择优惠券</view>
+    <view class="texts_list" bindtap="selectDiscountsTab">
+      <view>优惠券</view>
+      <view wx:if="{{discounts==0?true:false}}" style="color: rgb(102, 102, 102);">{{discountsList.length==0?'暂无可用优惠券':'选择优惠券>'}}</view>
+      <view wx:if="{{discounts==0?false:true}}">
+        <text style="color:red">-￥{{discounts}}</text> ></view>
+    </view>
+  </view>
+  <view class="texts">
+    <view class="goods_top">支付信息</view>
+    <view class="texts_counte">
+      <view class="texts_list">
+        <view>商品金额</view>
+        <view>￥{{good_price*buyNum}}</view>
+      </view>
+      <view class="texts_list">
+        <view>优惠金额</view>
+        <view>￥{{discounts}}</view>
+      </view>
+      <view class="texts_list">
+        <view>邮费</view>
+        <view>{{youfei==0?'包邮':'￥5'}}</view>
+      </view>
+      <view class="texts_list">
+        <view>实付金额</view>
+        <view>￥{{good_price*buyNum-discounts+youfei}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="service" style="padding-bottom:30rpx">
+    <view class="service_top">
+      <view style="font-size:30rpx;font-weight: bold;">鉴甄宝服务</view>
+      <view style="display: flex;align-items:center;justify-content: start;">
+        <view style=" display: flex;align-items: center;justify-content: start;">
+          <view class="service_top_medal">限时特惠</view>
+          <view style="display: flex;align-items: center;justify-content: start;margin-top:10rpx">
+            <view style="font-size:32rpx;color:black;font-weight: bold;">
+              <text style="font-size:25rpx">￥</text> 40
+            </view>
+            <view style="font-size:24rpx;color:rgba(132, 132, 132, 1);margin:left:6rpx; text-decoration: line-through;">
+              ￥60
+            </view>
+          </view>
+        </view>
+        <view style="margin-left:20rpx;margin-bottom:10rpx">
+          <switch style="zoom:.6" checked="{{switch1Checked}}" bindchange="switch1Change" />
+        </view>
+      </view>
+    </view>
+    <view style="width:94%;height:40rpx;margin:auto;font-weight: bold;font-size:25rpx;line-height:50rpx;color:rgba(185, 53, 62, 1)">
+      平台全品类保真！已有95.3%的用户选择了鉴甄宝服务！
+    </view>
+    <view style="width:94%;margin:auto;font-size:24rpx;color:rgba(132, 132, 132, 1)">
+      商品将保价快递至甄宝气官方合作鉴定中心，一旦通过鉴定，将会出具国家级权威鉴定证书，支持全国复检！若不通过，货款和鉴定费将会全额原路退返！
+    </view>
+  </view>
+  <view class="textss" style="padding-bottom:60px">
+    <view class="textss_top">买家留言</view>
+    <view class="weui-textarea" wx:if="{{pays==true?false:true}}">
+      <textarea wx:if="{{selectdiscounts==true?false:true}}" maxlength="30" type='text' bindinput="textareas" show-confirm-bar="{{false}}" placeholder="留言30字内（选填）" style="border:none;resize: none;width:100%;height:100%; font-size:24rpx" />
+    </view>
+  </view>
+  <view class="bottom" wx:if="{{goPay}}">
+    <view style="width:300rpx;margin-left:30rpx;font-weight: bold;display:flex;align-items: center; justify-content: start">
+      <view>实付金额:</view>
+      <view style="font-size:30rpx;color:red">
+        ￥{{good_price*buyNum-discounts+jianZhenM+youfei}}
+      </view>
+    </view>
+    <view class="bottom_pay" bindtap="PayOff">支付订单</view>
+  </view>
+  <view class="pay" wx:if="{{pays}}">
+    <view class="pay_select">
+      <view style=" font-size: 32rpx;" class="pay_select_top">确认支付</view>
+      <view class="pay_select_top">{{good_price*buyNum-discounts+jianZhenM+youfei}}元</view>
+      <view class="pay_select_select">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <view class="pay_list">
+            <view class="list_title">
+              <image style="width:80rpx;height:80rpx;margin-left:20rpx;margin-right:15rpx;" src="../../static/images/wxPay.png"></image>
+              <view>微信支付</view>
+              <view class="ps"></view>
+            </view>
+            <radio class="radio" value="wx"></radio>
+          </view>
+          <!-- <view class="pay_list">
+                        <view class="list_title">
+                            <image style="width:80rpx;height:80rpx;margin-left:20rpx;margin-right:15rpx;" src="../../static/images/yue.png"></image>
+                            <view>余额支付</view>
+                        </view>
+                        <radio class="radio" value="yue"></radio>
+                    </view> -->
+        </radio-group>
+      </view>
+      <view class="pay_btn" bindtap="goStatus">确认支付</view>
+      <image class="pay_off" bindtap="PayOff" src="../../static/images/off.png" />
+    </view>
+  </view>
+  <view wx:if="{{selectdiscounts}}" class="discounts">
+    <view class="discounts_center">
+      <image bindtap="selectDiscountsTab" class="discounts_list_off" src="../../static/images/off.png" />
+      <view class="discounts_top">
+        <view style="width:94%;height:50rpx;margin:auto;font-size:30rpx;line-height:50rpx;">
+          可用优惠券
+        </view>
+      </view>
+      <view class="discounts_list">
+        <view class="discounts_list_detail" bindtap="selectDiscounts" data-couponsname="{{item.coupons_name}}" data-couponsamount="{{item.coupons_amount/100}}" data-couponsid="{{item.coupons_id}}" wx:for="{{discountsList}}" wx:key="index">
+          <view class="discounts_list_detail_top">
+            <view style="margin-left:30rpx">
+              <view style="font-size:45rpx;color:red">
+                <text style="font-size:30rpx">￥</text> {{item.coupons_amount/100}}
+              </view>
+              <view style="font-size:25rpx">满{{item.order_min_amount/100}}元可用</view>
+            </view>
+            <view style="margin-left:60rpx">
+              <view style="font-size:35rpx">{{item.coupons_name}}</view>
+              <view style="font-size:25rpx;margin-top:20rpx">{{item.coupons_descr}}</view>
+            </view>
+          </view>
+          <view class="discounts_list_detail_bto">
+            <view style="margin-left:10rpx">过期时间:{{item.use_end_date}}</view>
+            <view class="discounts_list_detail_bto_btn">去使用</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

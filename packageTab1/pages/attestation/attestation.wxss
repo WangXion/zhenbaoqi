@@ -1,0 +1,125 @@
+page {
+    background-color: white;
+}
+
+.store {
+    width: 100%;
+    height: 220rpx;
+}
+
+.store_top {
+    width: 90%;
+    height: 170rpx;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.store_top_left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+}
+.medal{
+    width: 30rpx;
+    height:30rpx;
+    font-size: 20rpx;
+    font-style: oblique;
+    text-align: center;
+    line-height: 30rpx;
+    border-radius: 50%;
+    background-color: rgb(227, 164, 85);
+    color: white;
+    position: absolute;
+    top: 135rpx;
+    left: 135rpx;
+}
+.guanzhu {
+    width: 120rpx;
+    height: 50rpx;
+    text-align: center;
+    line-height: 50rpx;
+    border-radius: 25rpx;
+    font-size: 28rpx;
+
+}
+
+.store_bottom {
+    width: 70%;
+    height: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 25%;
+    font-size: 26rpx;
+    color: rgb(148, 148, 148)
+}
+
+.empty {
+    width: 100%;
+    height: 20rpx;
+    background-color: rgba(243, 243, 243, 1);
+}
+
+.store_grade_top {
+    width: 94%;
+    height: 90rpx;
+    font-size: 35rpx;
+    margin: auto;
+    line-height: 90rpx;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(243, 243, 243, 1);
+}
+
+
+.store_grade_list {
+    width: 94%;
+    margin: auto;
+}
+
+
+.store_grade_list_detail {
+    width: 100%;
+    height: 90rpx;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 30rpx;
+}
+
+.store_grade_list_detail_num {
+    font-size: 30rpx;
+    font-weight: bold;
+    color: rgb(197, 79, 101);
+}
+
+.store_grade_list_detail_text {
+    margin-left: 50rpx;
+    font-size: 30rpx;
+    color: rgb(148, 148, 148)
+}
+.store_grade_counte{
+    width: 100%;
+    margin-top: 30rpx;
+}
+.store_grade_counte_list{
+    width: 94%;
+    height: 100rpx;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    margin-top: 50rpx;
+}
+.store_grade_counte_list_img{
+    height: 100rpx;
+}
+.store_grade_counte_list_text{
+    margin-left: 30rpx;
+   
+}

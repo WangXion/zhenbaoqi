@@ -1,0 +1,6 @@
+<view class="web_page">
+    <view>
+        <image style="width:100%;diplay:block" mode="widthFix" src="https://www.zbq888.cn/zhen_url/image/setUpStore.png" />
+        <view bindtap="goPay" class="btn">立即开店</view>
+    </view>
+</view>

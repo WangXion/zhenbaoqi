@@ -1,0 +1,113 @@
+<view class="stores">
+    <image class="top_bg" mode="aspectFill" src="{{detail.merchants_back==''?'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586943744762&di=6e4f8949ed6af2d45c4460fef11fbcff&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fphotoblog%2F1205%2F06%2Fc2%2F11505596_11505596_1336277330229_mthumb.jpg':detail.merchants_back}}" />
+    <view class="top">
+        <view class="top_detail">
+            <view class="top_detail_store">
+                <view class="top_detail_store_left" bindtap="goStoreAuthentication">
+                    <view style="width:140rpx;height:140rpx;">
+                        <image style="width:100%;height:100%;border-radius: 6rpx;" mode="aspectFill" src="{{detail.head_img==''?'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586943432492&di=bc9eb2a92b7e2b9a94cee53aad2d7a57&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F01%2F54%2F02%2F805746fb22442cb.jpg':detail.head_img}}" />
+                    </view>
+                    <view style="margin-left:10rpx">
+                        <view style="font-size:30rpx; font-weight: bold;">
+                            {{detail.merchants_name}}
+                        </view>
+                        <view style="font-size:26rpx; color: rgba(136, 136, 136, 1);">
+                            {{detail.merchants_subtitle}}
+                        </view>
+                    </view>
+                    <image class="medal" src="../../static/images/storeV.png" />
+                </view>
+                <view class="top_detail_store_right">
+                    <view class="guanzhu" bindtap="guanzhu" style="{{guanZhu==0?'color: red;background-color: white;border: 1px solid red;' :'color: white;background-color: red;'}}">
+                        {{guanZhu==0? '已关注': '+关注'}}
+                    </view>
+                </view>
+            </view>
+            <view class="top_store_msg">
+                <view>
+                    <view>{{detail.quality_retention_money/100}}</view>
+                    <view style="font-size:22rpx;color:rgba(157, 157, 157, 1)">质保金</view>
+                </view>
+                <view style="color:rgba(182, 182, 182, 1)">|</view>
+                <view>
+                    <view>{{detail.merchants_grade}}</view>
+                    <view style="font-size:22rpx;color:rgba(157, 157, 157, 1)">店铺评价</view>
+                </view>
+                <view style="color:rgba(182, 182, 182, 1)">|</view>
+                <view>
+                    <view>{{detail.focus_number}}</view>
+                    <view style="font-size:22rpx;color:rgba(157, 157, 157, 1)">关注</view>
+                </view>
+            </view>
+            <!-- <view class="top_store_pingjia">
+                <view class="top_store_pingjia_list">
+                    商品描述
+                    <view class="top_store_pingjia_class">好</view>
+                </view>
+                <view class="top_store_pingjia_list">
+                    服务态度
+                    <view class="top_store_pingjia_class">极好</view>
+                </view>
+                <view class="top_store_pingjia_list">
+                    物流服务
+                    <view class="top_store_pingjia_class">一般</view>
+                </view>
+            </view> -->
+        </view>
+    </view>
+    <view class="select">
+        <view class="select_top" bindtap='goPingjia'>
+            <view style="font-size: 30rpx;font-weight: bold;">店铺评价</view>
+            <view style="font-size:24rpx;color:rgba(136, 136, 136, 1);font-weight: bold;">
+                {{evaluate.length}}条
+            </view>
+        </view>
+        <view class="select_list">
+            <view class="list" wx:if="{{evaluate.length==0?false:true}}" wx:for="{{evaluate}}" wx:key="index" style="background:rgba(249, 231, 227, 1);color:red;">
+                {{item.evaluation_label}}
+            </view>
+            <view wx:if="{{evaluate.length==0?true:false}}" style="width:100%;height:100%;font-size:30rpx;text-align:center;line-height:160rpx;color:rgba(168, 168, 168, 1)">
+                暂无评价~
+            </view>
+        </view>
+    </view>
+    <view class="goods_list">
+        <view class="goods_list_tab">
+            <i-tabs current="{{ current }}" bindchange="handleChange">
+                <i-tab key="tab1" title="一口价"></i-tab>
+                <!-- <i-tab key="tab2" title="上架"></i-tab> -->
+            </i-tabs>
+        </view>
+        <view class="goodList">
+            <view class="goods" wx:for="{{goods}}" wx:key="index" bindtap="goDetail" data-id="{{item.goods_id}}">
+                <view class="good_img">
+                    <image style="width:100%;height:100%; border-radius: 15rpx 15rpx 0 0;" mode="aspectFill" src="{{item.goods_img}}" />
+                </view>
+                <view class="good_detail">
+                    <view class="good_name">{{item.goods_name}}</view>
+                    <view style="width:94%;margin:auto;margin-top:10rpx; font-weight: bold;">
+                        <text style="color:red;font-size:24rpx;margin-right:5rpx">当前</text>
+                        <text style="color:red;font-size:20rpx;margin-right:5rpx">￥</text>
+                        <text style="color:red;font-size:26rpx;">{{item.goods_amount/100}}</text>
+                    </view>
+                </view>
+            </view>
+            <view style="width:100%;height:50rpx;font-size:24rpx;text-align:center;line-height:50rpx;margin-top:50rpx;color:rgba(154, 154, 154, 1)">
+                {{goods.length==0?'暂无数据~':'已经到底了~'}}
+            </view>
+        </view>
+    </view>
+    <view class="bottom">
+        <view bindtap="goIndex">
+            <image style="width:40rpx;height:40rpx;display:block;margin:auto" src="../../static/images/house.png" />
+            <view style="font-size:26rpx;">首页</view>
+        </view>
+        <view bindtap="goSixin">
+            <image style="width:40rpx;height:40rpx;display:block;margin:auto" src="../../static/images/message1.png" />
+            <view style="font-size:26rpx;">私信</view>
+        </view>
+        <view class="bottom_right" bindtap="guanzhu">
+            <view class="bottom_btn">{{guanZhu==0?'已关注店铺':'点击关注店铺'}}</view>
+        </view>
+    </view>
+</view>

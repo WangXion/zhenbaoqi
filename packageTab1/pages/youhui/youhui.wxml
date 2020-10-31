@@ -1,0 +1,131 @@
+<view class="youhui">
+    <view class="youhui_top">
+        <i-tabs current="{{ current }}" style="width:100%;height:100%" bindchange="handleChange">
+            <i-tab key="tab1" title="可使用"></i-tab>
+            <i-tab key="tab2" title="已使用"></i-tab>
+            <i-tab key="tab3" title="已过期"></i-tab>
+        </i-tabs>
+    </view>
+    <view class="list">
+        <view class="list_detail" wx:if="{{ke}}">
+            <view class="list_detail_list" wx:for="{{list}}" wx:key="index">
+                <view class="list_detail_list_top" bindtap="goUse">
+                    <view style="margin-left:30px">
+                        <view style="color:red;font-weight: bold;">
+                            <text style="font-size:30rpx">￥</text>
+                            <text style="font-size:50rpx;">{{item.coupons_amount/100}}</text>
+                        </view>
+                        <view style="font-size:20rpx;color:rgba(102, 102, 102, 1)">
+                            满{{item.order_min_amount/100}}元可用
+                        </view>
+                    </view>
+                    <view style="margin-left:100rpx;color:rgba(102, 102, 102, 1);">
+                        <view style="font-size:35rpx;font-weight: bold;">
+                            {{item.coupons_name}}
+                        </view>
+                        <view style="font-size:25rpx">{{item.coupons_descr}}</view>
+                    </view>
+                </view>
+                <view class="list_detail_list_bottom">
+                    <view style="font-size:20rpx;margin-left:30rpx;color:rgba(102, 102, 102, 1)">
+                        到期时间:{{item.use_end_date}}
+                    </view>
+                    <view class="gosend" bindtap="goUse">
+                        去使用
+                    </view>
+                </view>
+            </view>
+            <view wx:if="{{list.length==0?false:true}}" style="width:100%;height:50rpx;font-size:24rpx;text-align:center;line-height:50rpx;margin-top:50rpx;color:rgba(154, 154, 154, 1)">
+                已经到底了~
+            </view>
+        </view>
+        <view class="list_detail" wx:if="{{yi}}">
+            <view class="list_detail_list" wx:for="{{list}}" wx:key="index">
+                <view class="list_detail_list_top">
+                    <view style="margin-left:30px">
+                        <view style="color:rgba(182, 182, 182, 1);font-weight: bold;">
+                            <text style="font-size:30rpx">￥</text>
+                            <text style="font-size:50rpx;">{{item.coupons_amount/100}}</text>
+                        </view>
+                        <view style="font-size:20rpx;color:rgba(182, 182, 182, 1)">
+                            满{{item.order_min_amount/100}}元可用
+                        </view>
+                    </view>
+                    <view style="margin-left:100rpx;color:rgba(182, 182, 182, 1);">
+                        <view style="font-size:35rpx;font-weight: bold;">
+                            {{item.coupons_name}}
+                        </view>
+                        <view style="font-size:25rpx" wx:if="{{item.goods_type==1?true:false}}">
+                            新人专栏使用
+                        </view>
+                        <view style="font-size:25rpx" wx:if="{{item.goods_type==2?true:false}}">
+                            除新人专栏商品外所有商品
+                        </view>
+                        <view style="font-size:25rpx" wx:if="{{item.goods_type==3?true:false}}">
+                            所有商品
+                        </view>
+                    </view>
+                </view>
+                <view class="list_detail_list_bottom">
+                    <view style="font-size:20rpx;margin-left:30rpx;color:rgba(182, 182, 182, 1)">
+                        到期时间:{{item.use_end_date}}
+                    </view>
+                </view>
+                <view class="youhui_state">
+                    <image style="width:100%;height:100%" src="../../images/shiyong.png" />
+                </view>
+            </view>
+            <view wx:if="{{list.length==0?false:true}}" style="width:100%;height:50rpx;font-size:24rpx;text-align:center;line-height:50rpx;margin-top:50rpx;color:rgba(154, 154, 154, 1)">
+                已经到底了~
+            </view>
+        </view>
+        <view class="list_detail" wx:if="{{guo}}">
+            <view class="list_detail_list" wx:for="{{list}}" wx:key="index">
+                <view class="list_detail_list_top">
+                    <view style="margin-left:30px">
+                        <view style="color:rgba(182, 182, 182, 1);font-weight: bold;">
+                            <text style="font-size:30rpx">￥</text>
+                            <text style="font-size:50rpx;">{{item.coupons_amount/100}}</text>
+                        </view>
+                        <view style="font-size:20rpx;color:rgba(182, 182, 182, 1)">
+                            满{{item.order_min_amount/100}}元可用
+                        </view>
+                    </view>
+                    <view style="margin-left:100rpx;color:rgba(182, 182, 182, 1);">
+                        <view style="font-size:35rpx;font-weight: bold;">
+                            {{item.coupons_name}}
+                        </view>
+                        <view style="font-size:25rpx" wx:if="{{item.goods_type==1?true:false}}">
+                            新人专栏使用
+                        </view>
+                        <view style="font-size:25rpx" wx:if="{{item.goods_type==2?true:false}}">
+                            除新人专栏商品外所有商品
+                        </view>
+                        <view style="font-size:25rpx" wx:if="{{item.goods_type==3?true:false}}">
+                            所有商品
+                        </view>
+                    </view>
+                </view>
+                <view class="list_detail_list_bottom">
+                    <view style="font-size:20rpx;margin-left:30rpx;color:rgba(182, 182, 182, 1)">
+                        到期时间:{{item.use_end_date}}
+                    </view>
+                </view>
+                <view class="youhui_state">
+                    <image style="width:100%;height:100%" src="../../images/guoqi.png" />
+                </view>
+            </view>
+            <view wx:if="{{list.length==0?false:true}}" style="width:100%;height:50rpx;font-size:24rpx;text-align:center;line-height:50rpx;margin-top:50rpx;color:rgba(154, 154, 154, 1)">
+                已经到底了~
+            </view>
+        </view>
+        <view class="bg" wx:if="{{list.length==0?true:false}}">
+            <view style="width:100%;height:100%;">
+                <image style="width:150rpx;height:150rpx;display:block;margin:auto;margin-top:30%;" src="../../../static/images/none.png"></image>
+                <view style="width:100%;margin-top:20rpx;color:rgba(102, 102, 102, 1);font-size:26rpx; text-align: center;">
+                    暂无内容~
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

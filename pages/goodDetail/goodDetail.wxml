@@ -1,0 +1,151 @@
+<view class="jiluDetail">
+    <view class="goods_img">
+        <view class="swiper">
+            <swiper indicator-dots="true" style="width:100%;height:660rpx;" indicator-active-color="red" autoplay="{{autoPlay}}" indicator-color="white" interval="2000" duration="300">
+                <swiper-item wx:if="{{detail.goods_video==''?false:true}}">
+                    <video style="width:100%;height:100%;" object-fit="contain" controls='false' src="{{detail.goods_video}}" bindplay="goPlay" bindpause="outPlay" bindended="outPlay" controls='true'></video>
+                </swiper-item>
+                <block wx:for="{{imgUrls}}" style="width:100%;height:660rpx;" wx:key="key">
+                    <swiper-item style="width:100%;height:100%;">
+                        <image style="width:100%;height:100%" data-imgurl="{{item}}" bindtap="showImg" class="swiper-item" mode="aspectFill" src="{{item}}"></image>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+    </view>
+    <view class="good_names">
+        <view style="margin-left:30rpx; overflow: hidden;">
+            <view style=" overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+                {{detail.goods_name}}
+            </view>
+            <view class="goods_text">
+                <view style="color:red;font-size:32rpx; font-weight: bold;">
+                    <text style="font-size:22rpx;">￥</text>
+                    {{detail.goods_amount?detail.goods_amount/100:'0'}}
+                </view>
+            </view>
+        </view>
+        <view class="good_shoucang" bindtap="shouCang">
+            <image style="width:40rpx;height:40rpx;display:block;margin:auto;" src="{{shoucang==1? '../../static/images/fav1.png':'../../static/images/faved.png'}}" />
+            <view style="color:{{shoucang==1? 'rgba(102, 102, 102, 1)':'rgba(203, 37, 40, 1)'}}">
+                收藏
+            </view>
+        </view>
+    </view>
+    <view class="goods_information">
+        <view class="goods_text_text">
+            <view class="zhuan" wx:if="{{detail.goods_original_amount==0?false:true}}">
+                ￥{{detail.goods_original_amount/100}}
+            </view>
+            <view style="float:right;">库存：{{detail.inventory}}件</view>
+        </view>
+        <view class="serve">
+            服 务
+            <view style="margin-right:30rpx;margin-left:20rpx;color:rgba(240, 200, 158, 1);">
+                {{detail.goods_freight==0?'全国包邮':'邮费5元'}}
+            </view>
+            <view style="margin-right:30rpx;color:rgba(240, 200, 158, 1)">
+                {{detail.is_new==0?'新人专享':''}}
+            </view>
+            <view style="margin-right:30rpx;color:rgba(240, 200, 158, 1)">
+                {{detail.is_seven==0?'7天退款':''}}
+            </view>
+        </view>
+    </view>
+    <view class="yanzheng" bindtap="goBaoZheng">
+        <image style="width:100%;height:100%;" src="../../static/images/yanzheng.png" />
+    </view>
+    <view class="top">
+        <view class="store" bindtap="goStore">
+            <view class="store_img">
+                <image style="width:100%;height:100%; border-radius: 10rpx;" mode="aspectFill" src="{{storeDetail.head_img==''?'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586943087307&di=d0323eec09d315835576ff1c1fe8d135&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3D5204d34f78899e5178db32107797f505%2F35a85edf8db1cb132eaa3ca1de54564e93584b44.jpg':storeDetail.head_img}}" />
+            </view>
+            <view class="store_name">
+                <view style="font-size:35rpx;font-weight: bold;">
+                    {{storeDetail.merchants_name}}
+                </view>
+                <view class="store_text">
+                    <view style="font-size:24rpx;color:rgba(136, 136, 136, 1);">
+                        {{storeDetail.merchants_subtitle}}
+                    </view>
+                </view>
+            </view>
+            <view class="guanzhu">进店逛逛</view>
+        </view>
+        <image class="medal" src="../../static/images/storeV.png" />
+    </view>
+    <view class="store_xinxi">
+        <view class="xinxi_list">
+            <view style="font-size:32rpx;">{{storeDetail.quality_balance}}</view>
+            <view style="font-size:22rpx;color:rgba(157, 157, 157, 1)">质保金</view>
+        </view>
+        <view style="color:rgba(182, 182, 182, 1)">|</view>
+        <view class="xinxi_list">
+            <view style="font-size:32rpx;">{{storeDetail.evaluation_size}}</view>
+            <view style="font-size:22rpx;color:rgba(157, 157, 157, 1)">店铺印象</view>
+        </view>
+        <view style="color:rgba(182, 182, 182, 1)">|</view>
+        <view class="xinxi_list">
+            <view style="font-size:32rpx;">{{storeDetail.focus_size}}</view>
+            <view style="font-size:22rpx;color:rgba(157, 157, 157, 1)">关注</view>
+        </view>
+    </view>
+    <view class="shuoming">
+        <view class="shuoming_top">
+            <view style="font-size:34rpx;font-weight: bold;">商品描述</view>
+        </view>
+        <view class="shuoming_text">
+            <view>{{detail.goods_describe}}</view>
+        </view>
+        <view class="shuoming_top">
+            <view style="font-size:34rpx;font-weight: bold;">商品详情</view>
+        </view>
+        <view class="goods_imgs">
+            <view wx:for="{{imgUrls}}" style="width:100%;" wx:key="index">
+                <image data-imgurl="{{item}}" bindtap="showImg" style="width:100%;display:block;" mode="widthFix" src="{{item}}" />
+            </view>
+        </view>
+        <view style="width:100%; padding-bottom:70px">
+            <image style="width:100%; display:block" mode="widthFix" src="https://www.zbq888.cn/zhen_url/image/shopping_info.png" />
+        </view>
+    </view>
+    <view class="bottom">
+        <view bindtap="goStore">
+            <image style="width:40rpx;height:40rpx;display:block;margin:auto" src="../../static/images/store1.png" />
+            <view style="font-size:26rpx;">店铺</view>
+        </view>
+        <view bindtap="gosixin">
+            <image style="width:40rpx;height:40rpx;display:block;margin:auto" src="../../static/images/message1.png" />
+            <view style="font-size:26rpx;">私信</view>
+        </view>
+        <view class="bottom_right" bindtap="UP">
+            <view class="bottom_btn">立即购买</view>
+        </view>
+    </view>
+    <view class="up" wx:if="{{up}}">
+        <view class="up_buy">
+            <view class="up_top">
+                <image style="width:250rpx;height:200rpx;" src="{{imgUrls[0]}}" />
+                <view style="margin-left:30rpx;overflow: hidden;">
+                    <view style="height:130rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+                        {{detail.goods_name}}
+                    </view>
+                    <view style="">￥{{detail.goods_amount/100}}</view>
+                </view>
+            </view>
+            <view class="buy_num">
+                <view>购买数量:</view>
+                <view>
+                    <i-panel>
+                        <view style="padding: 16px">
+                            <i-input-number value="{{buyNum}}" min="1" max="{{detail.inventory}}" bindchange="handleChange" />
+                        </view>
+                    </i-panel>
+                </view>
+            </view>
+            <view class="up_btn" bindtap="goDetail">立即下单</view>
+            <image class="up_off" bindtap="UPOff" style="width:30rpx;height:30rpx;" src="../../static/images/off.png" />
+        </view>
+    </view>
+<!-- <button  catchtap='onShareAppMessage' open-type='share'>分享</button> -->
+</view>

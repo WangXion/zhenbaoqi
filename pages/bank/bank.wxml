@@ -1,0 +1,21 @@
+<view class="bank">
+    <view class="bankList">
+        <view wx:for="{{bank}}" class="bank_list" wx:key="index">
+            <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+                <view>
+                    <view class="bank_list_top">
+                        <image style="width:70rpx;height:70rpx; border-radius: 50%;margin-right:20rpx;" src="{{item.logo}}" />
+                        <view style="font-size:32rpx; font-weight: bold;">
+                            <view>{{item.name}}</view>
+                            <view>{{item.type}}</view>
+                        </view>
+                    </view>
+                    <view style="font-size:34rpx; font-weight: bold; text-align: right; margin-right: 40rpx;">
+                        {{item.num}}
+                    </view>
+                </view>
+            </mp-slideview>
+        </view>
+    </view>
+    <view class="btns" wx:if="{{bank.length>0?false:true}}" bindtap="goAdd">绑定银行卡</view>
+</view>

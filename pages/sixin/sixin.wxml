@@ -1,0 +1,83 @@
+<view class="sixin">
+    <!-- <view class="good" wx:if="{{good}}">
+        <view class="good_left">
+            <image style="width:120rpx;height:120rpx; border-radius: 10rpx;" src="{{goods.img}}" />
+            <view style="margin-left:30rpx">
+                <view style="font-size:30rpx; font-weight: bold;">{{goods.name}}</view>
+                <view style="font-size:26rpx;margin-top:20rpx;">￥{{goods.price}}</view>
+            </view>
+        </view>
+        <view class="good_right">
+            <view class="goGood" bindtap="goGood">发送商品</view>
+        </view>
+    </view> -->
+    <view class="liaotian">
+        <view class="jilu" wx:for="{{jilu}}" wx:key="index">
+            <view class="kf" wx:if="{{item.from==userdata.user_id?false:true}}">
+                <view bindtap="goStore" style="width:80rpx;height:80rpx;">
+                    <image style="width:100%;height:100%;border-radius: 50%;" src="{{storeHeadImg=='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586943087307&di=d0323eec09d315835576ff1c1fe8d135&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3D5204d34f78899e5178db32107797f505%2F35a85edf8db1cb132eaa3ca1de54564e93584b44.jpg'?'':storeHeadImg}}" />
+                </view>
+                <view wx:if="{{item.type=='TIMTextElem'?true:false}}" style="margin-top:20rpx;" class="text">
+                    <view style="width:65%;height:100%;padding:20rpx;padding-right:0;border-radius: 8rpx;{{item.from==userdata.user_id? none:'background:white;color:black;'}}">
+                        {{item.payload.text}}
+                    </view>
+                </view>
+                <view wx:if="{{item.type=='TIMImageElem'?true:false}}">
+                    <image style="width:280rpx;margin-left:20rpx;border-radius: 15rpx" mode="widthFix" bindtap="showImg" data-imgurl="{{item.payload.imageInfoArray[0].imageUrl}}" src="{{item.payload.imageInfoArray[0].imageUrl}}" />
+                </view>
+                <view wx:if="{{item.type=='TIMSoundElem'?true:false}}">
+                    <audio style="width:100rpx;height:70rpx;border-radius: 8rpx;float:right;background:white;display:flex;align-items: center;justify-content: space-around;margin-left:20rpx" bindtap="audioPlay" src="{{item.payload.url}}" id="myAudio">
+                        <image style="width:50rpx;height:50rpx;margin-right:15rpx" src="../../static/images/voice.png" />
+                    </audio>
+                </view>
+            </view>
+            <view class="mine" wx:if="{{item.from==userdata.user_id?true:false}}">
+                <image style="width:80rpx;height:80rpx;border-radius: 50%;float: right;" src="{{userdata.head_img}}" />
+                <view wx:if="{{item.type=='TIMTextElem'?true:false}}" style="float:right;" class="text">
+                    <view style="height:100%;padding:20rpx;border-radius: 8rpx;{{item.from==userdata.user_id? 'background:rgba(140, 236, 114, 1);color:black;':none}};float:right;">
+                        {{item.payload.text}}
+                    </view>
+                </view>
+                <view wx:if="{{item.type=='TIMImageElem'?true:false}}">
+                    <image style="width:280rpx;margin-left:20rpx;border-radius: 15rpx;float:right;margin-right:20rpx" bindtap="showImg" data-imgurl="{{item.payload.imageInfoArray[0].imageUrl}}" mode="widthFix" src="{{item.payload.imageInfoArray[0].imageUrl}}" />
+                </view>
+                <view wx:if="{{item.type=='TIMSoundElem'?true:false}}">
+                    <audio style="width:100rpx;height:70rpx;border-radius: 8rpx;float:right;margin-right:20rpx;background:rgba(140, 236, 114, 1);display:flex;align-items: center;justify-content: space-around;" bindtap="audioPlay" src="{{item.payload.url}}" id="myAudio">
+                        <image style="width:50rpx;height:50rpx;margin-right:15rpx" src="../../static/images/voice.png" />
+                    </audio>
+                </view>
+                <view class="mine_goods" bindtap="goDetail" wx:if="{{item.payload.data?true:false}}">
+                    <image style="width:100%;height:350rpx;border-radius: 15rpx 15rpx 0 0 " mode="scaleToFill" src="{{item.payload.data.goods_img}}" />
+                    <view style="width:100%;font-size:30rpx;font-weight: bold;margin-left:15rpx;margin-top:15rpx; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+                        {{item.payload.data.goods_name}}
+                    </view>
+                    <view style="margin-left:15rpx;margin-top:15rpx;color:red;">
+                        <text style="font-size:24rpx;">￥</text>
+                        <text style="font-size:32rpx;">{{item.payload.data.goods_amount/100}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="shuru">
+        <view class="shuru_top">
+            <view class="yuyin">
+                <image style="width:100%;height:100%;" bindtap="voices" wx:if="{{voiceed==true?true:false}}" src="../../static/images/voice.png" />
+                <image style="width:100%;height:100%" bindtap="voices" wx:if="{{voiceed==false?true:false}}" src="../../static/images/keyboard.png" />
+            </view>
+            <view class="section">
+                <view bindtouchstart="mytouchstart" bindtouchend="mytouchend" style="width:100%;height:100%;text-align:center;line-height:80rpx" wx:if="{{voiceed==true?false:true}}">
+                    {{voiceText}}
+                </view>
+                <input class="textarea" wx:if="{{voiceed==true?true:false}}"  bindinput="shuRu" value="{{values}}" adjust-position maxlength="{{max}}" placeholder="请输入您要咨询的问题" />
+            </view>
+            <view class="add" bindtap="aDD" wx:if="{{values==''?true:false}}">+</view>
+            <view class="go" wx:if="{{values==''?false:true}}" bindtap="gO">发送</view>
+        </view>
+        <view wx:if="{{add}}" class="shuru_bottom">
+            <view style="width:120rpx;height:120rpx;margin-left:50rpx" bindtap="goImg">
+                <image style="width:100%;height:100%" src="../../static/images/photo.png" />
+            </view>
+        </view>
+    </view>
+</view>

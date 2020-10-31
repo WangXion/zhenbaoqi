@@ -1,0 +1,33 @@
+<view class="yue">
+    <view class="wallet">
+        <view class="title">账户余额(元)</view>
+        <view class="money">
+            ￥
+            <text style="font-size:50rpx">{{balance/100}}</text>
+        </view>
+        <view bindtap="goTixian" class="btn" style="top:100rpx;">提现</view>
+    </view>
+    <view class="bill">
+        <i-tabs current="{{ current }}" bindchange="handleChange">
+            <i-tab key="tab1" title="全部"></i-tab>
+            <i-tab key="tab2" title="收入"></i-tab>
+            <i-tab key="tab3" title="提现"></i-tab>
+            <i-tab key="tab4" title="支出"></i-tab>
+        </i-tabs>
+        <view class="bill_list" wx:for="{{lists}}" wx:key="index" bindtap="goDetail" data-type="{{item.change_type}}" data-odernum="{{item.change_number}}">
+            <view class="bill_text">
+                <view style="font-weight: bold;font-size:32rpx;">{{item.change_name}}</view>
+                <view style="font-weight: bold;font-size:30rpx;color:red">
+                    {{item.asset_type==1?'+':'-'}}{{item.change_amount/100}}
+                </view>
+            </view>
+            <view class="bill_text">
+                <view style="font-size:26rpx;color:rgba(136, 136, 136, 1)">
+                    {{item.asset_time}}
+                </view>
+                <!-- <view style="font-size:26rpx;color:rgba(136, 136, 136, 1)">{{item.state}}</view> -->
+            </view>
+        </view>
+        <view class="kong"></view>
+    </view>
+</view>

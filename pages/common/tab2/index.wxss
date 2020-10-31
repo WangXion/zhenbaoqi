@@ -1,0 +1,48 @@
+.i-tabs-tab {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    text-align: center;
+    position: relative
+}
+
+.i-tabs-tab-bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.i-tabs-tab-title {
+    font-size: 16px;
+    text-align: center;
+    box-sizing: border-box;
+    color: white
+}
+
+.i-tabs-tab-title-current {
+    width: 80rpx;
+    height: 60rpx;
+    /* border: 1px solid white; */
+    color: white;
+    text-align: center;
+    line-height: 60rpx;
+    /* border-radius: 30rpx; */
+    border-bottom: 2px solid white;
+
+}
+
+.i-tabs-tab-scroll {
+    display: inline-block;
+    width: 60px
+}

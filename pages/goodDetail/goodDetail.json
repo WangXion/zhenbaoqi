@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-input-number": "../common/input-number/index"
+  },
+  "navigationBarTitleText": "商品详情"
+}

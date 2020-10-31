@@ -1,0 +1,149 @@
+<view class="page">
+    <view class="store">
+        <view class="store_top">
+            <view class="store_top_left">
+                <image style="width:150rpx;height:150rpx;display:block;border-radius: 8rpx;" mode="aspectFill" src="{{detail.head_img}}" />
+                <view style="margin-left:30rpx;">
+                    <view style="font-size:36rpx;font-weight:bold;">{{detail.merchants_name}}</view>
+                    <view style="font-size:26rpx;margin-top:20rpx;color:rgba(102, 102, 102, 1)">
+                        {{detail.merchants_subtitle}}
+                    </view>
+                </view>
+                <image class="medal" src="../../../static/images/storeV.png" />
+            </view>
+            <view class="guanzhu" bindtap="guanzhu" style="{{guanZhu==0?'color: red;background-color: white;border: 1px solid red;' :'color: white;background-color: red;'}}">
+                {{guanZhu==0? '已关注': '+关注'}}
+            </view>
+        </view>
+        <view class="store_bottom">
+            <view>个人认证</view>
+            <view>|</view>
+            <view>质保金:   {{detail.quality_retention_money/100}}</view>
+            <view>|</view>
+            <view>关注数:   {{detail.focus_number}}</view>
+        </view>
+    </view>
+    <view class="empty"></view>
+    <view class="store_grade">
+        <view class="store_grade_top">
+            店铺中核评分:
+            <text style="color: rgb(197, 79, 101);">{{detail.merchants_grade}}</text>
+        </view>
+        <view class="store_grade_list">
+            <view class="store_grade_list_detail">
+                <view>商品描述</view>
+                <view style="width:50%;margin-left:20rpx">
+                    <i-progress percent="{{detail.describe_grade*20}}" status="wrong"></i-progress>
+                </view>
+                <view class="store_grade_list_detail_num">{{detail.describe_grade}}</view>
+                <!-- <view class="store_grade_list_detail_text" wx:if="{{detail.describe_grade*20==0?true:false}}">
+                    极差
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.describe_grade*20==20?true:false}}">
+                    很差
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.describe_grade*20==40?true:false}}">
+                    差
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.describe_grade*20==60?true:false}}">
+                    一般
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.describe_grade*20==80?true:false}}">
+                    好
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.describe_grade*20==100?true:false}}">
+                    非常好
+                </view> -->
+            </view>
+            <view class="store_grade_list_detail">
+                <view>服务态度</view>
+                <view style="width:50%;margin-left:20rpx">
+                    <i-progress percent="{{detail.service_grade*20}}" status="wrong"></i-progress>
+                </view>
+                <view class="store_grade_list_detail_num">{{detail.service_grade}}</view>
+                <!-- <view class="store_grade_list_detail_text" wx:if="{{detail.service_grade*20==0?true:false}}">
+                    极差
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.service_grade*20==20?true:false}}">
+                    很差
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.service_grade*20==40?true:false}}">
+                    差
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.service_grade*20==60?true:false}}">
+                    一般
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.service_grade*20==80?true:false}}">
+                    好
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.service_grade*20==100?true:false}}">
+                    非常好
+                </view> -->
+            </view>
+            <view class="store_grade_list_detail">
+                <view>物流服务</view>
+                <view style="width:50%;margin-left:20rpx">
+                    <i-progress percent="{{detail.logistics_grade*20}}" status="wrong"></i-progress>
+                </view>
+                <view class="store_grade_list_detail_num">{{detail.logistics_grade}}</view>
+                <!-- <view class="store_grade_list_detail_text" wx:if="{{detail.logistics_grade*20==0?true:false}}">
+                    极差
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.logistics_grade*20==40?true:false}}">
+                    很差
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.logistics_grade*20==20?true:false}}">
+                    差
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.logistics_grade*20==60?true:false}}">
+                    一般
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.logistics_grade*20==80?true:false}}">
+                    好
+                </view>
+                <view class="store_grade_list_detail_text" wx:if="{{detail.logistics_grade*20==100?true:false}}">
+                    非常好
+                </view> -->
+            </view>
+        </view>
+    </view>
+    <view class="empty"></view>
+    <view class="store_authentication">
+        <view class="store_grade_top">店铺认证信息</view>
+        <view class="store_grade_counte">
+            <view class="store_grade_counte_list">
+                <view class="store_grade_counte_list_img">
+                    <image style="height:100%;" mode="heightFix" src="../../images/attestation1.png" />
+                </view>
+                <view class="store_grade_counte_list_text">
+                    <view style="font-size:26rpx; font-weight: bold;">品质店铺</view>
+                    <view style="font-size:22rpx;color:rgba(153, 153, 153, 1);margin-top:10rpx;">
+                        该商家为平台认证的品质好店，行家承诺商品保真保质， 保障售后
+                    </view>
+                </view>
+            </view>
+            <view class="store_grade_counte_list">
+                <view class="store_grade_counte_list_img">
+                    <image style="height:100%;" mode="heightFix" src="../../images/attestation2.png" />
+                </view>
+                <view class="store_grade_counte_list_text">
+                    <view style="font-size:26rpx; font-weight: bold;">品质保证金</view>
+                    <view style="font-size:22rpx;color:rgba(153, 153, 153, 1);margin-top:10rpx;">
+                        该商家已缴纳品质保证金20000元，该资金将会用来保障 平台用户利益
+                    </view>
+                </view>
+            </view>
+            <view class="store_grade_counte_list">
+                <view class="store_grade_counte_list_img">
+                    <image style="height:100%;" mode="heightFix" src="../../images/attestation3.png" />
+                </view>
+                <view class="store_grade_counte_list_text">
+                    <view style="font-size:26rpx; font-weight: bold;">个人认证</view>
+                    <view style="font-size:22rpx;color:rgba(153, 153, 153, 1);margin-top:10rpx;">
+                        该商家已通过个人认证
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

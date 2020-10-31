@@ -1,0 +1,36 @@
+<view class="site">
+    <view class="sites">
+        <radio-group class="radio-group" bindchange="radioChange">
+            <view class="list" bindtap="selectSite" data-asd="{{item.ads_id}}" data-default="{{item.is_default}}" data-name="{{item.consignee}}" data-phone="{{item.phone_no}}" data-sitename="{{item.pcc_name}}" data-address="{{item.address}}" data-cityid='{{item.city_id}}' data-countyid='{{item.county_id}}' data-provinceid='{{item.province_id}}' wx:for="{{lists}}" wx:key="index">
+                <view class="user">
+                    <view class="user_top">
+                        <view>收货人:{{item.consignee}}</view>
+                        <view>{{item.phone_no}}</view>
+                    </view>
+                    <view class="user_site">收货地址:{{item.pcc_name}}{{item.address}}</view>
+                    <!-- <view class="user_yb">邮编:{{item.yb}}</view> -->
+                </view>
+                <view class="site_btn">
+                    <view style="color:{{item.is_default==0? 'red':'rgba(113, 113, 113, 1)' }}">
+                        <radio class="radio" color="red" checked="{{item.is_default==0?true:false}}"></radio>
+                        默认地址
+                    </view>
+                    <view class="site_btn_right">
+                        <view style="margin-right:30rpx">
+                            <image style="width:30rpx;height:30rpx" src="../../static/images/set.png" />
+                            编辑
+                        </view>
+                        <view catchtap="deleteSite" data-asdid="{{item.ads_id}}">
+                            <image style="width:30rpx;height:35rpx" src="../../static/images/delate.png" />
+                            删除
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </radio-group>
+    </view>
+    <view class="addSite" bindtap="setSite">添加地址</view>
+    <mp-dialog show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+        <view>确认删除当前地址吗?</view>
+    </mp-dialog>
+</view>

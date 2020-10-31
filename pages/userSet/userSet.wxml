@@ -1,0 +1,37 @@
+<view class="userSet">
+    <view class="user_info" bindtap="changeAva">
+        <view class="title" style="width:200rpx; ">点击更换头像</view>
+        <image style="width:100rpx;height:100rpx; border-radius: 50%; background-color:rgba(205, 205, 205, 1);" src="{{user_ava}}" />
+    </view>
+    <view class="user_info">
+        <view class="title">昵称</view>
+        <input class="weui-input" maxlength="11" placeholder="{{nickName}}" bindinput="name" />
+    </view>
+    <view class="user_info">
+        <view class="title">性别</view>
+        <input class="weui-input" maxlength="1" placeholder="{{sex}}" bindinput="sex" />
+    </view>
+    <!-- <view class="user_info">
+        <view class="title">电话</view>
+        <input class="weui-input" type="number" maxlength="11" placeholder="{{phone}}" bindinput="phone" />
+    </view> -->
+    <view class="user_info" wx:if="{{setCode}}">
+        <input class="weui-input" maxlength="8" placeholder="请输入验证码" bindinput="code" />
+        <button class="getCode" size="mini" bindtap="getCode" disabled='{{disabled}}'>
+            {{time}}
+        </button>
+    </view>
+    <view class="user_info">
+        <view class="title">生日</view>
+        <mp-cell prop="date" style="flex: 1;">
+            <picker data-field="date" mode="date" value="{{date}}" start="1970-09-01" end="2020-01-01" bindchange="bindDateChange">
+                <view class="weui-input">{{date}}</view>
+            </picker>
+        </mp-cell>
+    </view>
+    <!-- <view class="user_info" bindtap="goSite">
+        <view class="title" style="width:200rpx;">收货地址</view>
+        <view class="title" style="width:200rpx;">去设置地址</view>
+    </view> -->
+    <view class="btn" wx:if="{{btn}}" bindtap="submit">提交修改</view>
+</view>

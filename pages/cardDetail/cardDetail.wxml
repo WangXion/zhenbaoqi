@@ -1,0 +1,227 @@
+<view class="detail">
+  <view class="state">
+    <view style="color:rgba(255, 37, 37, 1); font-size: 36rpx;margin-left:20rpx;">
+      <image style="width:40rpx;height:36rpx;" src="../../static/images/cardDetail.png" /> {{state==1?'待支付':''}} {{state==2?'待发货':''}} {{state==3?'已发货':''}} {{state==4?'已签收':''}} {{state==5?'已评价':''}} {{state==6?'退款中':''}} {{state==7?'已退款':''}} {{state==8?'退款失败':''}} {{state==9?'已关闭':''}}
+    </view>
+    <view style="color:rgba(136, 136, 136, 1);font-size: 24rpx;margin-right:20rpx;"></view>
+  </view>
+  <view class="user">
+    <view class="user_top">
+      <view class="user_top_left">
+        <image style="width:40rpx;margin-right:10rpx;" mode="widthFix" src="../../static/images/dw.png" />
+        <view>收货人: {{site.site_name}} {{site.site_phone}}</view>
+      </view>
+      <view style="margin-right:20rpx;color:blue;font-size: 26rpx;" catchtap="copyNum" data-text="{{site.site_detail}}" data-name="{{site.site_name}}" data-phone="{{site.site_phone}}">
+        复制信息
+      </view>
+    </view>
+    <view class="user_site">收货地址: {{site.site_detail}}</view>
+    <!-- <view class="user_yb" >
+            邮编 {{site.site_youbian}}
+        </view> -->
+    <image style="width:100%;height:13rpx; position: absolute;bottom: 0;left: 0;" src="../../static/images/cardDetailBto.png" />
+  </view>
+  <view class="goods" bindtap="goGoodDetail">
+    <view class="goods_top">商品信息</view>
+    <view class="goods_list">
+      <view wx:for="{{goods}}" class="list" wx:key="index">
+        <view class="good_img">
+          <image style="width:100%;height:100%;" mode="aspectFill" src="{{good_img}}" />
+        </view>
+        <view class="good_text">
+          <view class="good_name">{{good_name}}</view>
+          <view class="good_price">
+            <view>￥{{good_price}}</view>
+            <view style="color:rgba(136, 136, 136, 1)">数量X{{buyNum}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="texts">
+    <view class="goods_top">优惠券</view>
+    <view class="texts_list">
+      <view>优惠券</view>
+      <view>未使用优惠券</view>
+    </view>
+  </view>
+  <view class="texts">
+    <view class="goods_top">支付信息</view>
+    <view class="texts_counte">
+      <view class="texts_list">
+        <view>商品金额</view>
+        <view>￥{{good_price*buyNum}}</view>
+      </view>
+      <view class="texts_list">
+        <view>优惠金额</view>
+        <view>￥{{discounts}}</view>
+      </view>
+      <view class="texts_list">
+        <view>邮费</view>
+        <view>{{youfei==0?'包邮':'￥5'}}</view>
+      </view>
+      <view class="texts_list">
+        <view>实付金额</view>
+        <view>￥{{good_price*buyNum-discounts+youfei}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="texts" wx:if="{{state==1? false: true}}">
+    <view class="goods_top">订单信息</view>
+    <view class="texts_list">
+      <view>订单编号</view>
+      <view style=" display: flex;justify-content: space-between;align-items: center;">
+        <view>{{order_number}}</view>
+        <view bindtap="copyNum" data-text="{{order_number}}" style="color:rgba(43, 146, 226, 1);">
+          复制
+        </view>
+      </view>
+    </view>
+    <view class="texts_list" wx:if="{{state==9?false:true}}">
+      <view>下单时间</view>
+      <view>{{order_time}}</view>
+    </view>
+    <view wx:if="{{state==2?true:false}}" class="texts_list">
+      <view>支付时间</view>
+      <view>{{pay_time}}</view>
+    </view>
+    <view wx:if="{{state==3?true:false}}" class="texts_list">
+      <view>支付时间</view>
+      <view>{{pay_time}}</view>
+    </view>
+    <view wx:if="{{state==4?true:false}}" class="texts_list">
+      <view>支付时间</view>
+      <view>{{pay_time}}</view>
+    </view>
+    <view wx:if="{{state==5?true:false}}" class="texts_list">
+      <view>支付时间</view>
+      <view>{{pay_time}}</view>
+    </view>
+    <view wx:if="{{state==6?true:false}}" class="texts_list">
+      <view>支付时间</view>
+      <view>{{pay_time}}</view>
+    </view>
+    <view wx:if="{{state==7?true:false}}" class="texts_list">
+      <view>支付时间</view>
+      <view>{{pay_time}}</view>
+    </view>
+    <view wx:if="{{state==8?true:false}}" class="texts_list">
+      <view>支付时间</view>
+      <view>{{pay_time}}</view>
+    </view>
+    <view wx:if="{{state==9?true:false}}" class="texts_list">
+      <view>取消时间</view>
+      <view>{{cancel_time}}</view>
+    </view>
+    <view wx:if="{{state==3?true:false}}" class="texts_list">
+      <view>发货时间</view>
+      <view>{{delivery_time}}</view>
+    </view>
+    <view wx:if="{{state==4?true:false}}" class="texts_list">
+      <view>发货时间</view>
+      <view>{{delivery_time}}</view>
+    </view>
+    <view wx:if="{{state==5?true:false}}" class="texts_list">
+      <view>发货时间</view>
+      <view>{{delivery_time}}</view>
+    </view>
+    <view wx:if="{{state==5?true:false}}" class="texts_list">
+      <view>评价时间</view>
+      <view>{{evaluation_time}}</view>
+    </view>
+    <view wx:if="{{state==4?true:false}}" class="texts_list">
+      <view>签收时间</view>
+      <view>{{evaluation_time}}</view>
+    </view>
+    <view wx:if="{{state==5?true:false}}" class="texts_list">
+      <view>签收时间</view>
+      <view>{{receiving_time}}</view>
+    </view>
+    <view wx:if="{{state==7?true:false}}" class="texts_list">
+      <view>退款时间</view>
+      <view>{{refund_time}}</view>
+    </view>
+  </view>
+  <!-- <view style="width:100%;height:200rpx;background:white;"></view> -->
+  <view class="texts">
+    <view class="goods_top">买家留言</view>
+    <text style="margin:0 20px; font-size:24rpx">{{remark}}</text>
+  </view>
+  <view class="bottom">
+    <view class="bottom_btn">
+      <view class="kefu" bindtap="gosixin">
+        <!-- <image style="width:100%;height:100%;" src="../../static/images/cardKF.png" /> -->
+      </view>
+      <view class="btn_list" wx:if="{{state==4? true :false }}">
+        <view class="btn" catchtap="goGoodDetail">再次购买</view>
+        <view class="btn" catchtap="goShouHou">去售后</view>
+        <view class="btn" catchtap="goevaluate" style="background:red;color:white; border: none;">
+          评价
+        </view>
+      </view>
+      <view class="btn_list" wx:if="{{state==1? true :false }}">
+        <view class="btn" style="background:red;color:white; border: none;" catchtap="goZhifu">
+          重新支付
+        </view>
+        <view class="btn" style="border: 1px solid red;color:red;" catchtap="openConfirm">
+          取消订单
+        </view>
+      </view>
+      <view class="btn_list" wx:if="{{state==2? true :false }}">
+        <view class="btn" style="background:rgba(255, 37, 37, 1);color:white" catchtap="tixing">
+          提醒发货
+        </view>
+        <!-- <view class="btn" style="border: 1px solid red;color:red;" catchtap="openConfirm">
+                    取消订单
+                </view> -->
+      </view>
+      <view class="btn_list" wx:if="{{state==3? true :false }}">
+        <view class="btn" bindtap="goShouHou">申请售后</view>
+        <view class="btn" catchtap="gologistics">查看物流</view>
+        <!-- <view class="btn" style="border: 1px solid red;color:red;" catchtap="openConfirm">
+                    取消订单
+                </view> -->
+        <view class="btn" style="background:red;color:white; border: none;" catchtap="goOn">
+          确认收货
+        </view>
+      </view>
+      <view class="btn_list" wx:if="{{state==9? true :false }}">
+        <view class="btn" catchtap="goGoodDetail">再次购买</view>
+      </view>
+      <view class="btn_list" wx:if="{{state==6? true :false }}"></view>
+      <view class="btn_list" wx:if="{{state==7? true :false }}"></view>
+    </view>
+    <mp-dialog show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+      <view>确定取消本次订单吗?</view>
+    </mp-dialog>
+  </view>
+  <view class="pay" wx:if="{{pays}}">
+    <view class="pay_select">
+      <view style=" font-size: 32rpx;" class="pay_select_top">确认支付</view>
+      <view class="pay_select_top">
+        <text style="font-size:40rpx;">{{good_price*buyNum-discounts}}元</text>
+      </view>
+      <view class="pay_select_select">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <view class="pay_list" style="border-bottom:1px solid rgb(223, 223, 223);">
+            <view class="list_title">
+              <image style="width:80rpx;height:80rpx;margin-left:20rpx;margin-right:15rpx;" src="../../static/images/wxPay.png"></image>
+              <view>微信支付</view>
+              <view class="ps"></view>
+            </view>
+            <radio class="radio" value="wx"></radio>
+          </view>
+          <view class="pay_list">
+            <view class="list_title">
+              <image style="width:80rpx;height:80rpx;margin-left:20rpx;margin-right:15rpx;" src="../../static/images/yue.png"></image>
+              <view>余额支付</view>
+            </view>
+            <radio class="radio" value="yue"></radio>
+          </view>
+        </radio-group>
+      </view>
+      <view class="pay_btn" bindtap="goStatus">确认支付</view>
+      <image class="pay_off" bindtap="PayOff" src="../../static/images/off.png" />
+    </view>
+  </view>
+</view>

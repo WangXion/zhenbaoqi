@@ -1,0 +1,20 @@
+<view class="login">
+    <view style="width:700rpx;height:500rpx;margin:auto;margin-top:100rpx">
+        <image style="width:100%;height:100%;" src="../../static/images/login1.png"></image>
+    </view>
+    <button style="background-color:rgb(181, 39, 51);color:white" class="wx_login" bindtap="goLogin">
+        点击进入
+    </button>
+    <!-- <view class="phone_login">
+        <view class="phone_img" bindtap="goPhone">
+            <image style="width:100%;height:100%;" src="../../static/images/phone.png"></image>
+        </view>
+        <view class="phone_txt" bindtap="goPhone">使用手机号登录></view>
+    </view> -->
+    <view class="login_bottom">
+        <image style="width:30rpx;height:100%;" src="../../static/images/hongbao.png"></image>
+        新人注册成功，赠送
+        <text style="color:red;">376元</text>
+        优惠卷
+    </view>
+</view>

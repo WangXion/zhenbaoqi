@@ -1,0 +1,27 @@
+<view class='video-container'>
+  <view class='video-scroll-container' animation="{{scrollAnimate}}">
+    <view class='video-scroll-item' bindtouchstart='onTouchStart' bindtouchend='onTouchEnd' wx:for-item="items" data-videoidx="{{index}}" wx:for="{{videoList}}" wx:key="idx">
+      <block wx:if="{{items.video_is_player}}">
+        <block wx:if="{{playerType==='video'}}">
+          <view class="user">
+            <view class="user_top" bindtap="goUP" data-username="{{items.username}}" data-state="{{items.state}}">
+              <image style="width:70rpx;height:70rpx; border-radius: 50%;" src="{{items.userhead}}" />
+              <view style="margin-left:10rpx">{{items.username}}</view>
+              <view class="guanzhu" catchtap="guanZhu" data-index="{{index}}" wx:if="{{items.state==0?false:true}}">
+                +关注
+              </view>
+            </view>
+            <view style="margin-top:20rpx">{{items.videoname}}</view>
+          </view>
+          <video-button-bar wx:if="{{btnOff}}" shoucang="{{items.shoucang}}" typeid="{{items.typeid}}"  bind:buttonhandle="buttonhandle"></video-button-bar>
+          <video class='video-player' autoplay='{{true}}' enable-play-gesture='{{true}}' loop="{{true}}" src="{{items.videourl}}" object-fit="{{fitType}}"></video>
+        </block>
+        <!-- <block wx:if="{{playerType==='live'}}">
+          <live-player class='video-player' style="width:{{screenWidth}}px" src="{{items.videourl}}" object-fit="{{fitType}}" autoplay mode="RTC">
+            <video-button-bar bind:buttonhandle="buttonhandle"></video-button-bar>
+          </live-player>
+        </block> -->
+      </block>
+    </view>
+  </view>
+</view>

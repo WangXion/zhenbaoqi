@@ -1,0 +1,205 @@
+page {
+    background-color: rgba(243, 243, 243, 1);
+}
+
+.good {
+    width: 100%;
+    height: 150rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+   
+}
+
+.good_left {
+    margin-left: 16rpx;
+    display: flex;
+    align-items: center;
+    justify-self: start;
+}
+.good_right{
+    position: relative;
+}
+.goGood{
+    width: 120rpx;
+    height: 40rpx;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 40rpx;
+    position: absolute;
+    top: 10rpx;
+    right: 30rpx;
+    color: rgba(197, 48, 48, 1);
+    border-radius: 8rpx;
+    border:  1px solid rgba(197, 48, 48, 1);
+
+}
+
+.sixin {
+    overflow: hidden;
+}
+
+.liaotian {
+    overflow: hidden;
+    margin-bottom: 200rpx;
+}
+
+.time {
+    width: 236rpx;
+    height: 40rpx;
+    margin: auto;
+    font-size: 24rpx;
+    color: white;
+    background-color: rgba(212, 213, 217, 1);
+    text-align: center;
+    line-height: 40rpx;
+    border-radius: 20rpx;
+    margin-top: 40rpx;
+}
+
+.tip {
+    width: 400rpx;
+    height: 40rpx;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 40rpx;
+    margin: auto;
+    background-color: rgba(212, 213, 217, 1);
+    color: white;
+    border-radius: 20rpx;
+    margin-top: 40rpx;
+}
+
+.jilu {
+    width: 100%;
+    overflow: auto;
+}
+
+.kf {
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    margin-top: 40rpx;
+    margin-left: 36rpx;
+    position: relative;
+}
+
+.name {
+    position: absolute;
+    top: -22rpx;
+    left: 115rpx;
+    font-size: 24rpx;
+}
+
+.mine {
+    width: 90%;
+    float: right;
+    margin-top: 40rpx;
+    margin-right: 36rpx;
+    position: relative;
+
+}
+
+.mine_counte {
+    width: 90%;
+
+}
+.mine_goods{
+    width:300rpx;
+    height: 500rpx;
+    float: right;
+    margin-top: 20rpx;
+    margin-right: 30rpx;
+    background-color: white;
+    border-radius: 15rpx;
+}
+
+.text {
+    width: 65%;
+    padding: 20rpx;
+    font-size: 26rpx;
+    border-radius: 10rpx;
+
+}
+
+.shuru {
+    width: 100%;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(246, 246, 246, 1);
+
+}
+
+.shuru_top {
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(82, 82, 82, 0.16);
+}
+.yuyin{
+    width: 50rpx;
+    height:50rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
+
+.section {
+    flex: 1;
+    height: 80rpx;
+    border-radius: 8rpx;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.textarea {
+    width: 96%;
+    margin: auto;
+}
+
+.add {
+    width: 60rpx;
+    height: 60rpx;
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+    font-size: 60rpx;
+    text-align: center;
+    line-height: 52rpx;
+    border-radius: 50%;
+    color: rgba(114, 114, 114, 1);
+    border: 1px solid rgba(114, 114, 114, 1);
+}
+
+.go {
+    width: 100rpx;
+    height: 80rpx;
+    background-color: rgba(140, 236, 114, 1);
+    color: black;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 25rpx;
+    margin-left: 10rpx;
+    margin-right: 10rpx;
+    
+
+}
+
+.shuru_bottom {
+    width: 100%;
+    height: 300rpx;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}

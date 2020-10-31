@@ -1,0 +1,437 @@
+page {
+    background-color: rgb(245, 245, 245);
+}
+
+.counter {
+    width: 100%;
+    height: 100%;
+}
+
+.indexNameLogo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 88rpx;
+    left: 0;
+    z-index: 1002;
+}
+
+.tabs {
+    width: 100%;
+    height: 120rpx;
+    position: fixed;
+    top: 140rpx;
+    left: 0;
+    z-index: 1000;
+
+}
+
+.indexTopBg {
+    width: 100%;
+    height: 240rpx;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.search {
+    width: 60%;
+    height: 60rpx;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-radius: 30rpx;
+    color: rgb(196, 194, 194)
+}
+
+.search_input {
+    font-size: 28rpx;
+    margin-left: 10rpx;
+}
+
+.guanZhu_top {
+    width: 92%;
+    height: 110rpx;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.store_list {
+    width: 94%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.storeList {
+    width: 30%;
+    height: 300rpx;
+    margin-top: 25rpx;
+    background-color: white;
+}
+
+.storeList_top {
+    width: 100%;
+    height: 150rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.modal {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    top: 110rpx;
+    left: 130rpx;
+}
+
+.storeList_name {
+    width: 100%;
+    height: 50rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50rpx;
+}
+
+.storeList_people {
+    width: 100%;
+    height: 50rpx;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 50rpx;
+    color: rgb(189, 189, 189);
+}
+
+.storeList_btn {
+    width: 100rpx;
+    height: 36rpx;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 36rpx;
+    border-radius: 18rpx;
+    margin: auto;
+    margin-top: 10rpx;
+
+}
+
+.guanZhu_center {
+    width: 100%;
+    height: 150rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+
+.guanZhu_bottom {
+    width: 100%;
+    height: 30rpx;
+    font-size: 24rpx;
+    text-align: center;
+    line-height: 30rpx;
+    color: rgba(173, 173, 173, 1);
+    margin-top: 100rpx;
+}
+
+.tuiJian {
+    width: 100%;
+    margin: auto;
+}
+
+.swiper {
+    width: 100%;
+
+}
+
+.swiper-item {
+    width: 100%;
+    height: 100%;
+}
+
+.tuiJian_tip {
+    width: 94%;
+    height: 76rpx;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 40rpx;
+    color: rgb(194, 147, 60);
+    font-size: 26rpx;
+}
+
+.tuiJian_tip_list {
+    height: 40rpx;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-right: 30rpx;
+}
+
+.circle {
+    width: 30rpx;
+    height: 30rpx;
+    border: 1px solid rgb(194, 147, 60);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30rpx;
+    float: left;
+    margin-right: 10rpx;
+}
+
+.category {
+    width: 100%;
+    height: 160rpx;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 24rpx;
+    background-color: white;
+    padding-top: 10rpx;
+}
+
+.welfare {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    padding-top: 20rpx;
+    margin-top: 20rpx;
+}
+
+
+.live_show {
+    width: 100%;
+    height: 440rpx;
+}
+
+.live_show_top {
+    width: 100%;
+    height: 120rpx;
+    margin: auto;
+
+
+}
+
+.moreLive {
+    width: 120rpx;
+    height: 40rpx;
+    font-size: 26rpx;
+    float: right;
+    border: 1px solid rgb(200, 53, 77);
+    color: rgb(200, 53, 77);
+    text-align: center;
+    line-height: 40rpx;
+    margin-top: 20rpx;
+}
+
+.live_list {
+    width: 100%;
+    height: 320rpx;
+    overflow: auto;
+    color: white;
+    margin-top: 15rpx;
+
+}
+
+.like {
+    width: 96%;
+    height: 480rpx;
+    margin: auto;
+}
+
+.like_counte {
+    width: 100%;
+    height: 440rpx;
+    margin-top: 10rpx;
+    background-image: linear-gradient(rgb(249, 123, 59), rgb(240, 7, 38));
+    border-radius: 25rpx;
+
+}
+
+
+.like_counte_top {
+    width: 100%;
+    height: 120rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.like_counte_top_left {
+    width: 50%;
+    height: 120rpx;
+    margin-top: 40rpx;
+    margin-left: 40rpx;
+    color: white;
+}
+
+.like_counte_list {
+    padding: 2rpx 20rpx 2rpx 20rpx;
+    background-color: rgb(249, 124, 86);
+    float: left;
+    margin-right: 15rpx;
+    border-radius: 10rpx;
+    margin-top: 15rpx;
+}
+
+.like_counte_top_right {
+    width: 120rpx;
+    height: 40rpx;
+    font-size: 26rpx;
+    color: white;
+    text-align: center;
+    line-height: 40rpx;
+    border: 1px solid white;
+    border-radius: 20rpx;
+    margin-right: 50rpx;
+}
+
+.like_list {
+    width: 96%;
+    height: 270rpx;
+    margin: auto;
+    overflow: auto;
+    margin-top: 30rpx;
+}
+
+.live_like_list {
+    width: 100%;
+    height: 270rpx;
+}
+
+.tuijianStore {
+    width: 96%;
+    height: 600rpx;
+    margin: auto;
+    margin-top: 70rpx;
+
+}
+
+.tuijianStore_counte {
+    width: 100%;
+    height: 480rpx;
+    background-color: white;
+    border-radius: 20rpx;
+    padding-top: 30rpx;
+    margin-top: 20rpx;
+    position: relative;
+
+}
+
+.store_v {
+    position: absolute;
+    width: 30rpx;
+    height: 30rpx;
+    font-size: 26rpx;
+    text-align: start;
+    line-height: 30rpx;
+    background-color: rgba(240, 134, 34, 1);
+    color: white;
+    font-style: italic;
+    border-radius: 50%;
+    bottom: -12rpx;
+    right: -7rpx;
+}
+
+.guanzhus {
+    width: 140rpx;
+    height: 50rpx;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 50rpx;
+    border-radius: 25rpx;
+}
+
+.tuijianStore_counte_top {
+    width: 94%;
+    height: 120rpx;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.tuijianStore_counte_goods {
+    width: 96%;
+    height: 270rpx;
+    margin: auto;
+    overflow: auto;
+    margin-top: 30rpx;
+}
+
+.tuijianStore_counte_goods_list {
+    width: 100%;
+    height: 270rpx;
+}
+
+.hot {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+
+}
+
+.hotRecommend {
+    width: 94%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.hotRecommend_list {
+    width: 48%;
+    margin-top: 30rpx;
+    border-radius: 20rpx;
+    background-color: white;
+}
+
+.hotRecommend_list_text {
+    width: 92%;
+    margin: auto;
+    padding-bottom: 20rpx;
+}
+
+.hotRecommend_list_medal {
+    width: 66rpx;
+    height: 30rpx;
+    font-size: 24rpx;
+    border: 1px solid red;
+    border-radius: 6rpx;
+    color: red;
+    text-align: center;
+    line-height: 30rpx;
+    margin-top: 20rpx;
+    font-weight: bold;
+    
+}
+
+.couponCanGet {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

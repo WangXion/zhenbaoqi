@@ -1,0 +1,32 @@
+<view class="kefu">
+    <view class="liaotian">
+        <view class="time">{{time}}</view>
+        <view class="tip">{{tip}}</view>
+        <view class="jilu" wx:for="{{jilu}}" wx:key="index">
+            <view class="kf" wx:if="{{item.type=='kf'?true:false}}">
+                <view style="width:80rpx;height:80rpx;">
+                    <image style="width:100%;height:100%;border-radius: 50%;" src="{{item.img}}" />
+                </view>
+                <view style="    margin-left: 20rpx;;{{item.type=='kf'? 'background:white;color:black;':none}}" class="text">
+                    {{item.counte}}
+                </view>
+            </view>
+            <view class="mine" wx:if="{{item.type=='kf'?false:true}}">
+                <image style="width:80rpx;height:80rpx;border-radius: 50%;  float: right;" src="{{item.img}}" />
+                <view style="margin-right:20rpx;float: right; {{item.type=='kf'? none:'background:red;color:white;'}}" class="text">
+                    {{item.counte}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="shuru">
+        <view class="shuru_top">
+            <view class="section">
+                <input class="textarea"  bindinput="shuRu" value="{{values}}" adjust-position maxlength="{{max}}" placeholder="请输入您要咨询的问题" />
+            </view>
+            <view class="add" bindtap="aDD" wx:if="{{values==''?true:false}}">+</view>
+            <view class="go" wx:if="{{values==''?false:true}}" bindtap="gO">发送</view>
+        </view>
+        <view wx:if="{{add}}" class="shuru_bottom"></view>
+    </view>
+</view>

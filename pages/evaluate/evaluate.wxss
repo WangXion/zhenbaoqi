@@ -1,0 +1,119 @@
+.top {
+    width: 94%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    margin-top: 30rpx;
+}
+
+.store_img {
+    width: 120rpx;
+    height: 120rpx;
+
+}
+
+.store_name {
+    margin-left: 25rpx;
+
+}
+
+.goods {
+    width: 100%;
+}
+
+.goods_top {
+    width: 94%;
+    height: 80rpx;
+    margin: auto;
+    line-height: 80rpx;
+    font-weight: bold;
+   
+}
+
+.good_detail {
+    width: 94%;
+    height: 240rpx;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    
+
+}
+
+.good_img {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.good_text {
+    margin-left: 20rpx;
+}
+
+.good_name {
+    width: 100%;
+    height: 160rpx;
+    font-size: 35rpx;
+    font-weight: bold;
+}
+
+.good_price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select {
+    width: 100%;
+    margin-top: 20rpx;
+}
+
+.select_list {
+    width: 94%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.list {
+    width: 200rpx;
+    height: 50rpx;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 50rpx;
+    border-radius: 5rpx;
+    margin-top: 20rpx;
+
+}
+
+.submit {
+    width: 94%;
+    height: 80rpx;
+    margin: auto;
+    font-size: 30rpx;
+    color: white;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 8rpx;
+    background-color: red;
+    margin-top: 80rpx;
+}
+
+.storeGrade {
+    width: 100%;
+    margin-top: 20rpx;
+}
+
+.storeGrade_list {
+    width: 90%;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: auto;
+    font-size: 26rpx;
+}

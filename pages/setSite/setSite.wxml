@@ -1,0 +1,33 @@
+<view class="setSite">
+    <view class="site_text">
+        <view class="user_name">
+            <view>收货人</view>
+            <input class="weui-input" maxlength="6" type="string" bindinput="name" value="{{peopleName}}" placeholder-style="text-align: right;" placeholder="请输入名字" />
+        </view>
+        <view class="user_name">
+            <view>联系电话</view>
+            <input class="weui-input" type="number" maxlength="11" bindinput="phone" value="{{phoneNum}}" placeholder-style="text-align: right;" placeholder="请输入电话" />
+        </view>
+        <view class="user_name">
+            <view>所在地区</view>
+            <picker mode="multiSelector" bindchange="bindRegionChange" bindcolumnchange="bindRegionColumnChange" range='{{multiArray}}'>
+                <text wx:if="{{addressCity}}" style="line-height:inherit">
+                    {{addressCity[0]}} > {{addressCity[1]}} > {{addressCity[2]}}
+                </text>
+                <text wx:else class='placeholder'>{{state==1?'请选择地址':sitename}}</text>
+            </picker>
+        </view>
+        <view class="textarea">
+            <textarea class="weui-textarea" maxlength="50" value="{{textCounter}}" bindinput="textareas" placeholder="请填写详细地址，不少于5字" style="height:300rpx;background:white;" />
+        </view>
+    </view>
+    <view class="switch">
+        <view class="user_name">
+            <view>设为默认</view>
+            <switch style="margin-right:20rpx;" color="red" checked="{{switch1Checked}}" bindchange="switch1Change" />
+        </view>
+    </view>
+    <view class="submit" bindtap="submit" style="{{textCounter==''? 'background:rgba(198, 198, 198, 1);' : 'background:red;' }}">
+        保存
+    </view>
+</view>

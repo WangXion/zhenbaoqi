@@ -1,0 +1,60 @@
+<view class="shoucang">
+    <view class="shoucang_tabs">
+        <i-tabs current="{{ current }}" bindchange="handleChange">
+            <i-tab key="tab1" title="收藏的商品"></i-tab>
+            <i-tab key="tab2" title="关注的店铺"></i-tab>
+        </i-tabs>
+    </view>
+    <view style="width:100%;height:80rpx"></view>
+    <view class="list">
+        <view class="goods_list" wx:if="{{goods}}" bindtap="goGoodDetail" data-goodid="{{item.goods_id}}" data-good wx:for="{{lists}}" wx:key="index">
+            <image style="width:100%;height:300rpx;border-radius: 20rpx 20rpx 0 0;" mode="aspectFill" src="{{item.goods_img}}" />
+            <view style="width:90%;height:50rpx;font-size:30rpx;font-weight: bold;line-height:50rpx;margin:auto;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+                {{item.goods_name}}
+            </view>
+            <view style="width:90%;height:50rpx;font-size:30rpx;line-height:50rpx;color:red;margin:auto;font-weight: bold;">
+            <text style="font-size:26rpx">￥</text>{{item.goods_amount/100}}
+            </view>
+        </view>
+        <view class="store_list" wx:if="{{store}}" wx:for="{{lists}}" wx:key="index">
+            <view class="store_list_top">
+                <view class="store_list_top_left">
+                    <image style="width:120rpx;height:120rpx;display:block; border-radius: 10rpx;" mode="aspectFill" src="{{item.head_img}}" />
+                    <view style="margin-left:30rpx;overflow: hidden;">
+                        <view style="height:40rpx;font-size:33rpx;font-weight: bold;">
+                            {{item.merchants_name}}
+                        </view>
+                        <view style="font-size:24rpx;color:rgba(177, 177, 177, 1);padding-top:20rpx">
+                            {{item.merchants_subtitle}}
+                        </view>
+                    </view>
+                </view>
+                <view class="store_list_top_right" bindtap="goStoreDetail" data-storeid="{{item.merchants_id}}">
+                    进店逛逛
+                </view>
+            </view>
+            <view class="store_list_bto">
+                <view class="store_goods">
+                    <view class="store_good_list" wx:for="{{item.list}}" wx:for-item='items' wx:key="idx" data-goodid="{{items.goods_id}}" bindtap="goGoodDetail">
+                        <image style="width:250rpx;height:250rpx;display:block; border-radius: 20rpx;" mode="aspectFill" src="{{items.goods_img}}" />
+                        <view class="store_good_list_text">
+                            <view style="white-space: nowrap; text-overflow:ellipsis; overflow:hidden;">
+                                {{items.goods_name}}
+                            </view>
+                            <view style="color:red;">￥{{items.goods_amount/100}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="bottom" wx:if="{{lists.length==0?false:true}}">已经到底啦~</view>
+    <view class="kong" wx:if="{{lists.length==0?true:false}}">
+        <view style="width:300rpx;height:300rpx;margin-top:35%">
+            <image style="width:200rpx;height:200rpx;display:block; margin:auto;" src="../../static/images/none.png" />
+            <view style="width:100%;height:50rpx;font-size:30rpx;text-align: center;line-height: 50rpx;margin-top:50rpx">
+                暂无数据~
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,68 @@
+<view class="evaluate">
+    <view class="top">
+        <view class="store_img">
+            <image style="width:100%;height:100%; border-radius: 10rpx;" src="{{good.img}}" />
+        </view>
+        <view class="store_name">
+            <view style="font-size:35rpx;font-weight: bold;">{{good.name}}</view>
+            <view style="font-size:24rpx;color:rgba(136, 136, 136, 1);">{{good.text}}</view>
+        </view>
+    </view>
+    <view class="goods">
+        <view class="goods_top" style=" border-bottom: 1px solid rgba(230, 230, 230, 1);">
+            商品信息
+        </view>
+        <view class="good_detail">
+            <view class="good_img">
+                <image style="width:100%;height:100%;" src="{{good.img}}" />
+            </view>
+            <view class="good_text">
+                <view class="good_name">{{good.name}}</view>
+                <view class="good_price">
+                    <view>￥{{good.price}}</view>
+                    <view style="font-size:26rpx;color:rgba(136, 136, 136, 1);">
+                        数量X{{good.num}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="select">
+        <view class="goods_top">立即点评</view>
+        <view class="select_list">
+            <view class="list" bindtap="select" data-index="{{index}}" data-item="{{item}}" wx:for="{{select}}" wx:key="index" style="{{style==index?'background:red;color:white;':'background-color: rgb(250, 247, 250);color:rgba(136, 136, 136, 1);'}}">
+                捡到宝了(10)
+            </view>
+        </view>
+    </view>
+    <view class="storeGrade">
+        <view class="goods_top">店铺评分</view>
+        <view>
+            <view class="storeGrade_list">
+                <view>描述相符</view>
+                <view style="margin-left:30rpx">
+                    <i-cell title="手势touch选择星">
+                        <i-rate bind:change="onChange" data-type="1" value="{{starIndex1}}"></i-rate>
+                    </i-cell>
+                </view>
+            </view>
+            <view class="storeGrade_list">
+                <view>服务态度</view>
+                <view style="margin-left:30rpx">
+                    <i-cell title="手势touch选择星">
+                        <i-rate bind:change="onChange" data-type="2" value="{{starIndex2}}"></i-rate>
+                    </i-cell>
+                </view>
+            </view>
+            <view class="storeGrade_list">
+                <view>物流服务</view>
+                <view style="margin-left:30rpx">
+                    <i-cell title="手势touch选择星">
+                        <i-rate bind:change="onChange" data-type="3" value="{{starIndex3}}"></i-rate>
+                    </i-cell>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="submit">立即点评</view>
+</view>

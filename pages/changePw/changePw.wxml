@@ -1,0 +1,31 @@
+<view class="changePw">
+    <view wx:if="{{state==1?true:false}}">
+        <view class="tip">微信授权成功,请绑定手机号</view>
+        <view class="counte">
+            <view class="phone_input">
+                <view class="phone_left">
+                    <view class="phone_title">+86</view>
+                </view>
+                <input class="weui-input" bindinput="bindPhone" maxlength="11" type="number" model="{{phone}}" placeholder="请输入11位手机号" />
+            </view>
+            <view class="yzm_input">
+                <input class="weui_input" bindinput="setCode" maxlength="8" type="number" placeholder="请输入验证码" />
+                <button class="getYzm" size="mini" bindtap="getCode" disabled='{{disabled}}'>
+                    {{time}}
+                </button>
+            </view>
+        </view>
+        <view class="btn" wx:if="{{btn}}" bindtap="submit">确定绑定</view>
+    </view>
+    <view style="width:100%;height:100%;" wx:if="{{state==2?true:false}}">
+        <view style="width:400rpx;height:320rpx;margin:auto;">
+            <image style="width:100%;height:100%" src="../../static/images/login1.png" />
+        </view>
+        <view style="width:490rpx;height:480rpx;margin:auto;margin-top:100rpx">
+            <image style="width:100%;height:100%" src="../../static/images/login2.jpg" />
+        </view>
+        <button type="primary" class="wx_login" bindtap="goLogin" open-type="getUserInfo">
+            微信一键登录
+        </button>
+    </view>
+</view>

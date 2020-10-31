@@ -1,0 +1,99 @@
+page {
+    background-color: rgb(248, 248, 248);
+}
+
+.register {
+    margin: 30rpx;
+}
+
+.logo {
+    width: 400rpx;
+    height: 310rpx;
+    margin: auto;
+    margin-top: 30rpx;
+}
+
+.phone_input {
+    width: 100%;
+    height: 100rpx;
+    background: rgb(255, 255, 255);
+    margin-top: 100rpx;
+}
+
+.phone_left {
+    width: 130rpx;
+    height: 100rpx;
+    font-size: 30rpx;
+    color: rgba(0, 0, 0, 1);
+    margin-left: 20rpx;
+    float: left;
+}
+
+.phone_title {
+    width: 80rpx;
+    height: 40rpx;
+    margin: auto;
+    margin-top: 30rpx;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 40rpx;
+    border-right: 2px solid rgba(154, 154, 154, 1);
+}
+
+.weui-input {
+    width: 350rpx;
+    height: 100rpx;
+    float: left;
+}
+
+.yzm_input {
+    width: 100%;
+    height: 100rpx;
+    margin-top: 30rpx;
+    background-color: white;
+}
+
+.weui_input {
+    width: 300rpx;
+    height: 100rpx;
+    float: left;
+    margin-left: 20rpx;
+}
+
+.getYzm {
+    margin-top: 20rpx;
+    float: right;
+    color: red;
+    background-color: white;
+}
+
+.goLogin {
+    width: 100%;
+    height: 100rpx;
+    color: white;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 100rpx;
+    border-radius: 15rpx;
+    margin-top: 30rpx;
+
+}
+
+.bottom {
+    width: 100%;
+    height: 30rpx;
+    margin-top: 20rpx;
+    font-size: 26rpx;
+    color: rgba(154, 154, 154, 1);
+    line-height: 30rpx;
+}
+
+.xieyi {
+    color: rgba(47, 122, 177, 1);
+}
+
+checkbox .wx-checkbox-input {
+    width: 30rpx;
+    height: 30rpx;
+
+}

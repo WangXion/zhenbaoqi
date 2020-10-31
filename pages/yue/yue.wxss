@@ -1,0 +1,67 @@
+page {
+    background-color: rgb(244, 244, 245);
+}
+
+.yue {
+    padding: 30rpx;
+}
+
+.wallet {
+    width: 100%;
+    height: 200rpx;
+    margin: auto;
+    background-image: linear-gradient(to right, rgb(255, 112, 102), rgb(255, 101, 83));
+    border-radius: 30rpx;
+    color: white;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    top: 40rpx;
+    left: 50rpx;
+    font-size: 28rpx;
+}
+
+.money {
+    position: absolute;
+    top: 90rpx;
+    left: 50rpx;
+    font-size: 28rpx;
+}
+
+.btn {
+    width: 100rpx;
+    height: 50rpx;
+    font-size: 28rpx;
+    text-align: center;
+    line-height: 50rpx;
+    background-color: rgb(255, 140, 131);
+    border-radius: 8rpx;
+    position: absolute;
+    right: 40rpx;
+}
+
+.bill {
+    margin-top: 20rpx;
+    background-color: white;
+}
+
+.bill_list {
+    width: 94%;
+    height: 130rpx;
+    background-color: white;
+    border-bottom: 1px solid rgb(244, 244, 245);
+    margin: auto;
+    margin-top: 20rpx;
+}
+
+.bill_text {
+    width: 100%;
+    height: 65rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}

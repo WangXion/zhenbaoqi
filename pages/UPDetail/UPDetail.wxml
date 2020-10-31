@@ -1,0 +1,8 @@
+<view class="UPDetail">
+    <view class="user">
+        <image style="width:100rpx;height:100rpx;margin:auto;margin-top:30rpx; border-radius: 50%;" src="{{img}}" />
+        <view style="font-size: 32rpx;">{{name}}</view>
+        <view style="font-size: 28rpx;">{{text}}</view>
+        <view class="guanzhu" bindtap="guanzhu" style="{{state==1?'background:rgba(233, 59, 68, 1);color:white;':'background:white;color:rgba(233, 59, 68, 1); border: 1px solid rgba(233, 59, 68, 1);'}}">{{state==1?'+关注':'已关注'}}</view>
+    </view>
+</view>

@@ -1,0 +1,113 @@
+<view class="lv">
+	<view class="lv_top">
+		<view class="top_bg">
+			<image style="width:100%;height:100%;" src="../../images/lvbg.png" />
+		</view>
+		<view class="top_ava">
+			<image style="width:100%;height:100%;border-radius:50%;" src="{{user_data.head_img}}"></image>
+		</view>
+		<view class="user_info" style="width:100%;height:60%;">
+			<view style="height:100%;float:left;font-size:30rpx;">{{user_data.nick_name}}</view>
+			<view class="lv_style">
+				<image style="width:100%;height:100%" src="{{user_lv.icon}}" />
+			</view>
+		</view>
+		<view class="top_num">珍宝分:{{user_lv.point}}</view>
+	</view>
+	<view class="lv_center">
+		<view class="lv_center_icon">
+			<view class="top" style="width:80%;">尊享以下特权</view>
+			<view class="authority_list">
+				<view style="width:20%;">
+					<image style="width:80rpx;height:80rpx" src="../../images/lvKF.png"></image>
+					<view>专属客服</view>
+				</view>
+				<view style="width:20%;">
+					<image style="width:80rpx;height:80rpx" src="../../images/lvVIP.png"></image>
+					<view>会员低价</view>
+				</view>
+				<view style="width:20%;">
+					<image style="width:80rpx;height:80rpx" src="../../images/lvWQ.png"></image>
+					<view>专业维权</view>
+				</view>
+				<view style="width:20%;">
+					<image style="width:80rpx;height:80rpx" src="../../images/lvActive.png"></image>
+					<view>特别活动</view>
+				</view>
+			</view>
+			<view class="authority_list">
+				<view style="width:20%;">
+					<image style="width:80rpx;height:80rpx" src="../../images/lvTQ.png"></image>
+					<view>身份特权</view>
+				</view>
+				<view style="width:20%;">
+					<image style="width:80rpx;height:80rpx" src="../../images/lvJF.png"></image>
+					<view>积分特权</view>
+				</view>
+				<view style="width:20%;">
+					<image style="width:80rpx;height:80rpx" src="../../images/lvSR.png"></image>
+					<view>提现免手续费</view>
+				</view>
+				<view style="width:20%;">
+					<image style="width:80rpx;height:80rpx" src="../../images/lvSR.png"></image>
+					<view>生日礼券</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 等级对照表 -->
+	<view class="grade">
+		<view class="top" style="width:80%;">等级对照表</view>
+		<view class="table">
+			<view style="width:33%">
+				<view class="table_top">会员等级</view>
+				<view class="table_list" wx:for="{{lv}}"  wx:key="index">
+                     <image style="width:136rpx; height:50rpx;vertical-align: middle;" src="{{item.icon}}"></image>
+                </view>
+				<!-- <view class="table_list" style=" background-color: rgb(250, 247, 250);">V1</view>
+                <view class="table_list" >V2</view>
+                <view class="table_list" style=" background-color: rgb(250, 247, 250);">V3</view>
+                <view class="table_list">V4</view>
+                <view class="table_list" style=" background-color: rgb(250, 247, 250);">V5</view>
+                <view class="table_list">V6</view>
+                <view class="table_list" style=" background-color: rgb(250, 247, 250);">V7</view>
+                <view class="table_list">V8</view>
+                <view class="table_list" style=" background-color: rgb(250, 247, 250);">V9</view> -->
+			</view>
+			<view style="width:0.5%;height:100%; border-left: 1px solid rgb(213, 212, 215);"></view>
+			<view style="width:33%">
+				<view class="table_top">会员名称</view>
+				<view class="table_list" wx:for="{{lv}}" wx:key="index">{{item.name}}</view>
+				<!-- <view class="table_list" style=" background-color: rgb(250, 247, 250);">白银</view>
+                <view class="table_list">黄金</view>
+                <view class="table_list" style=" background-color: rgb(250, 247, 250);">铂金</view>
+                <view class="table_list">钻石</view>
+                <view class="table_list" style=" background-color: rgb(250, 247, 250);">宗师</view>
+                <view class="table_list">王者</view>
+                <view class="table_list" style=" background-color: rgb(250, 247, 250);">霸主</view>
+                <view class="table_list">至尊</view>
+                <view class="table_list" style=" background-color: rgb(250, 247, 250);">传奇</view> -->
+			</view>
+			<view style="width:0.5%;height:100%; border-left: 1px solid rgb(213, 212, 215);;"></view>
+			<view style="width:33%">
+				<view class="table_top">所需积分</view>
+				<view class="table_list" wx:for="{{lv}}" wx:key="index">{{item.min_point}}~{{item.max_point}}</view>
+				<!-- <view class="table_list" style=" background-color: rgb(250, 247, 250);">6~20</view>
+                <view class="table_list">21~50</view>
+                <view class="table_list" style=" background-color: rgb(250, 247, 250);">51~200</view>
+                <view class="table_list">201~500</view>
+                <view class="table_list" style=" background-color: rgb(250, 247, 250);">501~2000</view>
+                <view class="table_list">2001~10000</view>
+                <view class="table_list"  style=" background-color: rgb(250, 247, 250);">10001~100000</view>
+                <view class="table_list">100001~500000</view>
+                <view class="table_list" style=" background-color: rgb(250, 247, 250);">500001以上</view> -->
+			</view>
+		</view>
+	</view>
+	<view class="lv_bottom">
+		<view class="top">积分计算方式</view>
+		<view class="grade_txt">
+			用户订单付款完成，即可获得对应的积分，单笔订单金额≥10元，订单所获得积分=订单实际支付金额/10，取整。订单确认收货后自动计算，如发生退货退款，则扣对应的积分。
+		</view>
+	</view>
+</view>

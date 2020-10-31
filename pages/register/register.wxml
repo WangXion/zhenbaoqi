@@ -1,0 +1,40 @@
+<view class="register">
+    <view class="register_top">
+        <view class="logo">
+            <image style="width:100%;height:100%" src="../../static/images/login1.png"></image>
+        </view>
+    </view>
+    <view class="counte">
+        <view class="phone_input">
+            <view class="phone_left">
+                <view class="phone_title">+86</view>
+            </view>
+            <input class="weui-input" bindinput="bindPhone" maxlength="11" type="number" model="{{phone}}" placeholder="请输入11位手机号" />
+        </view>
+        <view class="yzm_input">
+            <input class="weui_input" bindinput="setCode" maxlength="8" type="number" placeholder="请输入验证码" />
+            <button class="getYzm" size="mini" bindtap="getCode" disabled='{{disabled}}'>
+                {{time}}
+            </button>
+        </view>
+        <view class="yzm_input">
+            <input class="weui_input" bindinput="setUserID" maxlength="8" type="number" placeholder="请输入邀请码(选填)" />
+        </view>
+        <view class="goLogin" bindtap="goLogin" style="background:{{color}}">立即登录</view>
+    </view>
+    <view class="bottom">
+        <view style="float:left;">
+            <checkbox-group bindchange="checkboxChange">
+                <label class="checkbox" wx:for="{{items}}" wx:key="index">
+                    <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+                </label>
+            </checkbox-group>
+        </view>
+        <view style="float:left;">
+            已阅读并同意
+            <text class="xieyi" data-index="1" bindtap="geXieyi">《用户协议》</text>
+            和
+            <text class="xieyi" data-index="2"  bindtap="geXieyi">《隐私政策》</text>
+        </view>
+    </view>
+</view>

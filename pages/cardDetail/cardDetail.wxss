@@ -1,0 +1,273 @@
+page {
+    background-color: rgba(241, 241, 241, 1);
+}
+
+.state {
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+}
+
+.user {
+    width: 100%;
+    background-color: white;
+    position: relative;
+    margin-top: 10rpx;
+    border-bottom:1px solid rgb(223, 223, 223);
+}
+
+.user_top {
+    width: 100%;
+    height: 85rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.set_site {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: inherit;
+}
+
+.user_top_left {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 20rpx;
+    font-size: 30rpx;
+}
+
+.user_site {
+    width: 90%;
+    font-size: 28rpx;
+    margin:0 0 20px 20rpx;
+}
+
+.user_yb {
+    width: 100%;
+    height: 50rpx;
+    margin-left: 20rpx;
+    font-size: 28rpx;
+
+}
+
+.goods {
+    width: 100%;
+    margin-top: 10rpx;
+    background-color: white;
+}
+
+.goods_top {
+    width: 94%;
+    padding:10px 20px;
+    margin-bottom: 10px;
+    font-size: 28rpx;
+    border-bottom: 1px solid rgb(243, 243, 243);
+    font-weight: 600;
+}
+
+.goods_list {
+    width: 94%;
+    margin: auto;
+    background-color: white;
+}
+
+.list {
+    width: 100%;
+    height: 250rpx;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.good_img {
+    width: 200rpx;
+    height: 200rpx;
+}
+
+.good_text {
+    flex: 1;
+    margin-left: 30rpx;
+}
+
+.good_name {
+
+    height: 160rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+
+.good_price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26rpx;
+}
+
+.texts {
+    width: 100%;
+    margin-top: 10rpx;
+    background-color: white;
+}
+
+.texts_list {
+     padding:0 20px 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25rpx;
+}
+
+
+
+.textss {
+    width: 100%;
+    height: 200rpx;
+    margin-top: 10rpx;
+    background-color: white;
+}
+
+.textss_top {
+    width: 94%;
+    height: 60rpx;
+    margin: auto;
+    line-height: 60rpx;
+    font-weight: bold;
+}
+
+.weui-textarea {
+    width: 94%;
+    height: 100rpx;
+    margin: auto;
+    margin-top: 20rpx;
+    background-color: white;
+}
+
+.bottom {
+    width: 100%;
+    height: 300rpx;
+    background-color: white;
+    position: relative;
+
+}
+
+.bottom_btn {
+    width: 94%;
+    height: 100rpx;
+    position: absolute;
+    bottom: 50rpx;
+    left: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.kefu {
+    width: 55rpx;
+    margin-left: 30rpx;
+}
+
+.btn_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.btn {
+    width: 150rpx;
+    height: 60rpx;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 60rpx;
+    border: 1px solid rgba(255, 70, 73, 1);
+    border-radius: 30rpx;
+    margin-right: 30rpx;
+    color: rgba(255, 70, 73, 1);
+}
+
+.pay {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.685);
+    display: flex;
+    align-items: flex-end;
+
+
+}
+
+.pay_select {
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    position: relative;
+
+}
+
+
+
+.pay_select_top {
+    width: 100%;
+    height: 80rpx;
+    text-align: center;
+    line-height: 80rpx;
+
+
+}
+
+.pay_btn {
+    position: absolute;
+    width: 100%;
+    height: 100rpx;
+    bottom: 0rpx;
+    left: 0;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 100rpx;
+    background-color: rgba(255, 37, 37, 1);
+    color: white;
+}
+
+.pay_select_select {
+    width: 94%;
+    margin: auto;
+
+
+}
+
+.pay_list {
+    width: 100%;
+    height: 100rpx;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.list_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pay_off {
+    width: 30rpx;
+    height: 30rpx;
+    position: absolute;
+    right: 30rpx;
+    top: 30rpx;
+}

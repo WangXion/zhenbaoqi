@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-tabs": "../common/tabs/index",
+    "i-tab": "../common/tab/index",
+    "i-drawer": "../common/drawer/index"
+  },
+  "navigationBarTitleText": ""
+}

@@ -1,0 +1,119 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/storeList/storeList",
+    "pages/videoDetail/videoDetail",
+    "pages/UPDetail/UPDetail",
+    "pages/goodDetail/goodDetail",
+    "pages/store/store",
+    "pages/storeeValuate/storeeValuate",
+    "pages/register/register",
+    "pages/list/list",
+    "pages/message/message",
+    "pages/messageList/messageList",
+    "pages/messageDetail/messageDetail",
+    "pages/mine/mine",
+    "pages/live/live",
+    "pages/liveDetail/liveDetail",
+    "pages/search/search",
+    "pages/searchStatus/searchStatus",
+    "pages/userSet/userSet",
+    "pages/jilu/jilu",
+    "pages/shoucang/shoucang",
+    "pages/yue/yue",
+    "pages/bill/bill",
+    "pages/bank/bank",
+    "pages/addBank/addBank",
+    "pages/tixian/tixian",
+    "pages/card/card",
+    "pages/onOrder/onOrder",
+    "pages/cardDetail/cardDetail",
+    "pages/afterSale/afterSale",
+    "pages/saleStatus/saleStatus",
+    "pages/logistics/logistics",
+    "pages/evaluate/evaluate",
+    "pages/authentication/authentication",
+    "pages/site/site",
+    "pages/kefu/kefu",
+    "pages/web_page/web_page",
+    "pages/opinion/opinion",
+    "pages/setting/setting",
+    "pages/changePw/changePw",
+    "pages/protocol/protocol",
+    "pages/invitee/invitee",
+    "pages/help/help",
+    "pages/sixin/sixin"
+  ],
+  "plugins": {
+    "live-player-plugin": {
+      "version": "1.0.7",
+      "provider": "wx2b03c6e691cd7370"
+    }
+  },
+  "subPackages": [
+    {
+      "root": "packageTab1",
+      "pages": [
+        "pages/lv/lv",
+        "pages/merchant/merchant",
+        "pages/xinrenfuli/xinrenfuli",
+        "pages/tuijian/tuijian",
+        "pages/payStatus/payStatus",
+        "pages/youhui/youhui",
+        "pages/zhenpinbaozheng/zhenpinbaozheng",
+        "pages/downAPP/downAPP",
+        "pages/yyjl/yyjl",
+        "pages/lyqp/lyqp",
+        "pages/zptm/zptm",
+        "pages/zpzc/zpzc",
+        "pages/attestation/attestation"
+      
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "甄宝气",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#f10b2e",
+    "list": [
+      {
+        "selectedIconPath": "./static/images/house(1).png",
+        "iconPath": "./static/images/house.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "./static/images/search(1).png",
+        "iconPath": "./static/images/search.png",
+        "pagePath": "pages/list/list",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "./static/images/live(1).png",
+        "iconPath": "./static/images/live.png",
+        "pagePath": "pages/live/live",
+        "text": "直播"
+      },
+      {
+        "selectedIconPath": "./static/images/message(1).png",
+        "iconPath": "./static/images/message.png",
+        "pagePath": "pages/message/message",
+        "text": "消息"
+      },
+      {
+        "selectedIconPath": "./static/images/mine(1).png",
+        "iconPath": "./static/images/mine.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

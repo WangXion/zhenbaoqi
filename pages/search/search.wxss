@@ -1,0 +1,94 @@
+page {
+    background-color: rgba(245, 245, 245, 1);
+}
+
+.search_hd {
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+
+.search_input {
+    width: 80%;
+    height: 70rpx;
+    margin-left: 20rpx;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 26rpx;
+    background-color: rgba(245, 245, 245, 1);
+}
+
+.top_btn {
+    width: 80rpx;
+    height: 100rpx;
+    font-size: 32rpx;
+    text-align: center;
+    line-height: 100rpx;
+    margin-right: 20rpx;
+}
+
+.search_history {
+    width: 100%;
+    padding-bottom: 30rpx;
+}
+
+.top {
+    width: 100%;
+    height: 50rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(53, 53, 53);
+    font-size: 34rpx;
+}
+
+.history_list {
+    margin-left: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.list_list {
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    padding: 0 10rpx 0 10rpx;
+    font-size: 28rpx;
+    background-color: rgba(240, 240, 240, 1);
+    color: rgba(102, 102, 102, 1);
+}
+
+.hot_search {
+    width: 100%;
+    margin-top: 20rpx;
+}
+
+.search_status {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.search_status_list {
+    width: 96%;
+    height: 90rpx;
+    margin: auto;
+    line-height: 90rpx;
+    font-size: 30rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,23 @@
+<view class="help">
+    <view class="tab">
+        <i-tabs1 current="{{ current1 }}" bindchange="handleChange1">
+            <i-tab1 key="tab1" title="购物相关"></i-tab1>
+            <i-tab1 key="tab2" title="操作相关"></i-tab1>
+            <i-tab1 key="tab3" title="售后服务"></i-tab1>
+            <i-tab1 key="tab4" title="商店店铺"></i-tab1>
+        </i-tabs1>
+    </view>
+    <view class="center">
+        <view class="list" wx:for="{{list}}" wx:key="index">
+            <view class="list_list" bindtap="goHelpDetail" data-links="{{item.url}}">
+                {{item.arti_name}}
+            </view>
+        </view>
+    </view>
+    <view class="tabs">
+        <i-tab-bar current="{{ current2 }}" bindchange="handleChange2">
+            <i-tab-bar-item key="phone" icon="customerservice" current-icon="customerservice_fill" title="电话客服"></i-tab-bar-item>
+            <i-tab-bar-item key="online" icon="interactive" current-icon="interactive_fill" title="在线客服"></i-tab-bar-item>
+        </i-tab-bar>
+    </view>
+</view>

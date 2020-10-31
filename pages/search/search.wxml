@@ -1,0 +1,40 @@
+<view class="search">
+    <view class="search_hd">
+        <view class="search_input">
+            <image style="width:40rpx;height:40rpx;margin-left:20rpx" src="../../static/images/search(3).png" />
+            <input style="flex:1;height:60rpx;margin-left:10rpx" type="text" confirm-type="search" bindconfirm='enterSearch' value="{{values}}" placeholder="请输入商品名称或者类别" bindinput="searchs"></input>
+        </view>
+        <view bindtap="searchRightBtn" class="top_btn">搜索</view>
+    </view>
+    <view style="width:100%;height:100rpx;margin-bottom:10rpx;"></view>
+    <view class="search_list" wx:if="{{search_status.length>0?false:true}}">
+        <!-- 搜索历史 -->
+        <view class="search_history" wx:if="{{search_history}}">
+            <view class="top">
+                <view style="margin-left:30rpx">最近搜索</view>
+                <image bindtap="clearHistory" style="width:30rpx;height:35rpx;margin-right:30rpx;" src="../../static/images/clearHistory.png"></image>
+            </view>
+            <view class="history_list">
+                <view class="list_list" wx:for="{{history_search}}" bindtap="searchGoods" data-value="{{item.search_param}}" wx:key="index">
+                    {{item.search_param}}
+                </view>
+            </view>
+        </view>
+        <!-- 热门搜索 -->
+        <view class="hot_search">
+            <view class="top">
+                <view style="margin-left:30rpx">热门搜索</view>
+            </view>
+            <view class="history_list">
+                <view class="list_list" wx:for="{{hot_search}}" bindtap="searchGoods" data-value="{{item.search_param}}" wx:key="index">
+                    {{item.search_param}}
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="search_status" wx:if="{{search_status.length>0?true:false}}">
+        <view class="search_status_list" wx:for="{{search_status}}" bindtap="searchGoods" data-value="{{item.goods_name}}" wx:key="index">
+            {{item.goods_name}}
+        </view>
+    </view>
+</view>

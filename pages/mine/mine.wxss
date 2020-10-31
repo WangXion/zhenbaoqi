@@ -1,0 +1,168 @@
+page {
+    width: 100%;
+    height: 100%;
+}
+
+.mine {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.mine_top {
+    width: 100%;
+    height: 620rpx;
+    margin: auto;
+    background-size: 100%;
+    position: relative;
+}
+
+.tx {
+    width: 50rpx;
+    height: 80rpx;
+    position: absolute;
+    top: 95rpx;
+    left: 50rpx;
+}
+
+.ava {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    position: absolute;
+    top: 210rpx;
+    left: 40rpx;
+    border: 1px solid white;
+}
+
+.user_info {
+    position: absolute;
+    top: 220rpx;
+    left: 190rpx;
+    color: white;
+}
+
+.user_ID {
+    position: absolute;
+    top: 284rpx;
+    left: 190rpx;
+    color: white;
+}
+
+.user_lv {
+    width: 80rpx;
+    height: 40rpx;
+    border-radius: 25rpx;
+    float: left;
+    margin-top: 15rpx;
+    margin-left: 10rpx;
+
+}
+
+.user_statistics {
+    width: 100%;
+    height: 115rpx;
+    color: white;
+    font-size: 36rpx;
+    position: absolute;
+    bottom: 120rpx;
+    left: 0;
+}
+
+.tatistics_list {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.vip {
+    width: 96%;
+    height: 95rpx;
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+
+}
+
+.mine_statistics {
+    width: 96%;
+    height: 160rpx;
+    margin: auto;
+    font-size: 28rpx;
+    margin-top: 20rpx;
+    box-shadow: rgb(212, 210, 210) 0px 0px 10px;
+    -webkit-box-shadow: rgb(212, 210, 210) 0px 0px 10px;
+    -moz-box-shadow: rgb(212, 210, 210) 0px 0px 10px;
+
+}
+
+.statistics_category {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25rpx;
+    margin-top: 10rpx;
+}
+
+
+.mine_card {
+    width: 96%;
+    height: 210rpx;
+    margin: auto;
+    font-size: 28rpx;
+    margin-top: 20rpx;
+    box-shadow: rgb(212, 210, 210) 0px 0px 10px;
+    -webkit-box-shadow: rgb(212, 210, 210) 0px 0px 10px;
+    -moz-box-shadow: rgb(212, 210, 210) 0px 0px 10px;
+}
+
+.card_top {
+    width: 100%;
+    height: 90rpx;
+}
+
+.card_bottom {
+    width: 100%;
+    height: 160rpx;
+
+}
+
+.mine_bto {
+    width: 94%;
+    margin: auto;
+    margin-top: 30rpx;
+    padding-bottom: 100rpx;
+}
+
+.mine_bto_list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.mine_bto_list_list {
+    width: 25%;
+    height: 120rpx;
+    margin-top: 40rpx;
+
+}
+
+.mine_bto_list_list_img {
+    margin: auto;
+    display: block
+}
+
+.mine_bto_list_list_text {
+    width: 100%;
+    font-size: 25rpx;
+    margin-top: 10rpx;
+    text-align: center;
+
+}
+.mylist{ width: 25%; text-align: center;}

@@ -1,0 +1,38 @@
+page {
+    background-color: rgba(245, 245, 245, 1);
+}
+
+.settting {
+
+    margin-top: 20rpx;
+}
+
+.set_list {
+    width: 100%;
+    height: 120rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    background: white;
+
+}
+
+.title {
+    color: rgb(95, 95, 95);
+    width: 160rpx;
+    font-size: 28rpx;
+    margin-left: 20rpx;
+    margin-right: 15rpx;
+
+}
+.btn{
+    width: 100%;
+    height:100rpx;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 100rpx;
+    color: red;
+    background: white;
+
+}

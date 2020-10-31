@@ -1,0 +1,291 @@
+<view class="index">
+    <view class="counter">
+        <image class="indexTopBg" src="../../static/images/indexTopBg.png" />
+        <view class="indexNameLogo">
+            <image style="width:104rpx;height:46rpx;dispaly:block;" src="../../static/images/indexNameLogo.png"></image>
+        </view>
+        <view class="tabs">
+            <view style="width:100%;height:100rpx; display: flex;align-items: center; justify-content: space-between;">
+                <view style="display: flex;align-items: center; justify-content:space-around;margin-left:20rpx" bindtap="goSearch">
+                    <image style="width:40rpx;height:40rpx;display:block;margin-left:10rpx" src="../../static/images/search(4).png" />
+                </view>
+                <view style="width:50%;height:100%;margin:auto">
+                    <i-tabs current="{{ current }}" bindchange="handleChange">
+                        <i-tab key="tab1" title="关注"></i-tab>
+                        <i-tab key="tab2" title="推荐"></i-tab>
+                    </i-tabs>
+                </view>
+                <image style="width:45rpx;height:70rpx;display:block;margin-right:20rpx" bindtap="goMSG" src="{{message}}"></image>
+            </view>
+        </view>
+        <view style="width:100%;height:240rpx"></view>
+        <view class="counter_center">
+            <!-- 关注 -->
+            <view class="guanZhu" wx:if="{{guanZhu}}">
+                <view class="guanZhu_top">
+                    <view style="font-size:32rpx; font-weight: bold; color: black;">优选店铺</view>
+                    <view bindtap="goStoreList" style="font-size:24rpx; color: rgb(184, 184, 184);">
+                        查看全部>
+                    </view>
+                </view>
+                <view class="store_list">
+                    <view class="storeList" wx:for="{{storeList}}" wx:key="index" data-storeid="{{item.merchants_id}}" bindtap="gostore">
+                        <view class="storeList_top">
+                            <image style="width:120rpx;height:120rpx; border-radius: 50%; border:1px solid rgba(178, 178, 178, 1)" src="{{item.head_img}}" />
+                            <image class="modal" src="../../static/images/storeV.png" />
+                        </view>
+                        <view class="storeList_name">{{item.merchants_name}}</view>
+                        <view class="storeList_people">{{item.focus_size}}关注</view>
+                        <view class="storeList_btn" catchtap="focusStore" data-storeid="{{item.merchants_id}}" data-focus="{{item.is_focus}}" style="{{item.is_focus==0?'background:white;color:rgba(233, 59, 68, 1); border: 1px dashed rgba(233, 59, 68, 1);':'background:rgba(233, 59, 68, 1);color:white;'}}">
+                            {{item.is_focus==0? '去逛逛':'关注'}}
+                        </view>
+                    </view>
+                </view>
+                <view class="guanZhu_center">
+                    <view style="margin-left:20rpx;font-size:32rpx; font-weight: bold;">新品上架</view>
+                    <view style="margin-left:10rpx;margin-right:20rpx;font-size:24rpx;color:rgba(173, 173, 173, 1);">
+                        国风好物 佳品汇聚
+                    </view>
+                </view>
+                <view class="goods_list"></view>
+                <view class="guanZhu_bottom">已经到底啦~</view>
+            </view>
+            <!-- 推荐 -->
+            <view class="tuiJian" wx:if="{{tuiJian}}">
+                <view class="swiper">
+                    <swiper autoplay="true" interval="2000" duration="300">
+                        <block wx:for="{{imgUrls}}" wx:key="key">
+                            <swiper-item>
+                                <image class="swiper-item" bindtap="goBanner" data-url="{{item.url}}" mode="aspectFill" src="{{item.photo}}"></image>
+                            </swiper-item>
+                        </block>
+                    </swiper>
+                </view>
+                <view style="width:100%;background:white;" bindtap='goZPGZ'>
+                    <view class="tuiJian_tip">
+                        <view style="display:flex;justify-content: start;align-items: center;">
+                            <view class="tuiJian_tip_list">
+                                <image style="width:32rpx;height:32rpx;margin-right:5rpx" src="../../static/images/indexZ.png" />
+                                <view style="color: rgb(163, 163, 163);">真品保证</view>
+                            </view>
+                            <view class="tuiJian_tip_list">
+                                <image style="width:32rpx;height:32rpx;margin-right:5rpx" src="../../static/images/indexQ.png" />
+                                <view style="color: rgb(163, 163, 163);">源头价格</view>
+                            </view>
+                            <view class="tuiJian_tip_list">
+                                <image style="width:32rpx;height:32rpx;margin-right:5rpx" src="../../static/images/indexJian.png" />
+                                <view style="color: rgb(163, 163, 163);">假一赔万</view>
+                            </view>
+                        </view>
+                        <view style="color: rgb(194, 147, 60);">详情></view>
+                    </view>
+                </view>
+                <!-- <view class="category">
+                    <view bindtap="goZhenping">
+                        <image style="width:100rpx;height:100rpx;" src="../../static/images/index1.png"></image>
+                        <view>珍品市场</view>
+                    </view>
+                    <view bindtap="goJianLou">
+                        <image style="width:100rpx;height:100rpx;" src="../../static/images/index2.png"></image>
+                        <view>极速捡漏</view>
+                    </view>
+                    <view bindtap="goStoreList">
+                        <image style="width:100rpx;height:100rpx;" src="../../static/images/index3.png"></image>
+                        <view>玩家优店</view>
+                    </view>
+                    <view bindtap="goZhangyan">
+                        <image style="width:100rpx;height:100rpx;" src="../../static/images/jilu2.png"></image>
+                        <view>掌掌眼力</view>
+                    </view>
+                </view> -->
+                <view class="welfare">
+                    <view style="width:100%;  font-size:40rpx; font-weight: bold;float:left;margin-right:10rpx; text-align: center;">
+                        精选内容
+                    </view>
+                    <view style="width:98%;display: flex;align-items: center;justify-content: space-between;margin:auto; border-bottom:1px solid #eee;">
+                     <image style="border-right:1px solid #eee" mode="widthFix" bindtap="goJianLou" src="https://www.zbq888.cn/zhen_url/image/index_welfare_1.png" />
+                     <image  mode="widthFix" bindtap="goLYQP" src="https://www.zbq888.cn/zhen_url/image/index_welfare_2.png" />
+                      </view>
+                     <view style="width:98%;display: flex;align-items: center;justify-content: space-between;margin:auto">
+                    <image style="border-right:1px solid #eee" bindtap="goZPGZ"  mode="widthFix" src="https://www.zbq888.cn/zhen_url/image/index_welfare_3.png" />
+                     <image mode="widthFix" bindtap="goZPTM" src="https://www.zbq888.cn/zhen_url/image/index_welfare_4.png" />
+                    </view>
+                </view>
+                <view style="width:100%;height:200rpx;margin-top:10rpx" bindtap="goxinren">
+                    <image style="width:96%;height:100%;display:block;margin:auto" src="https://www.zbq888.cn/zhen_url/image/index_welfare_5.png" />
+                </view>
+                <!-- <view class="live_show">
+                    <view class="live_show_top">
+                        <view style="font-size:40rpx; font-weight: bold;float:left;margin-right:10rpx;">
+                            好货直播
+                        </view>
+                        <view style="height:60rpx;font-size:30rpx;line-height: 80rpx;color:rgba(135, 135, 135, 1);float:left;">
+                            臻选超值特惠
+                        </view>
+                        <view class="moreLive" bindtap="goLive">更多直播</view>
+                    </view>
+                    <view class="live_list">
+                        <view style="width:1200rpx;height: 320rpx;display: flex">
+                            <view wx:for="{{live_list}}" wx:key="index" style="width:235rpx;height:320rpx;margin-right:10rpx;background-color: black;">
+                                <view style="width:100%;height:40rpx;font-size:22rpx;margin-top:10rpx;">
+                                    <view style="float:left;width:75rpx;height:35rpx;margin-left:10rpx; margin-right:10rpx;background: rgb(255, 123, 0);text-align: center;line-height: 35rpx;">
+                                        直播中
+                                    </view>
+                                    <view>2313人观看</view>
+                                </view>
+                                <view style="width:100%;height:200rpx;">
+                                    <image style="width:100%;height:100%;" src="{{item}}" />
+                                </view>
+                                <view style="width:100%;heihgt:60rpx;font-size:32rpx; text-align: center;line-height: 60rpx;">
+                                    主营各类文玩
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view> -->
+                <!-- <view class="like">
+                    <view class="live_show_top">
+                        <view style="font-size:40rpx; font-weight: bold;float:left;margin-right:10rpx;">
+                            猜你喜欢
+                        </view>
+                        <view style="height:60rpx;font-size:30rpx;line-height: 80rpx;color:rgba(135, 135, 135, 1);float:left;">
+                            逛一逛 挑选好货
+                        </view>
+                    </view>
+                    <view class="like_counte">
+                        <view class="like_counte_top">
+                            <view class="like_counte_top_left">
+                                <view style="font-size:35rpx;">
+                                    <view style="float:left;width:40rpx;height:40rpx;margin-top:10rpx;border-radius: 50%;font-size:24rpx;background:white;color:rgb(249, 123, 59); text-align: center;line-height: 40rpx;">
+                                        👍
+                                    </view>
+                                    为你推荐
+                                </view>
+                                <view style="width:100%;font-size:24rpx;">
+                                    <view class="like_counte_list">翡翠</view>
+                                    <view class="like_counte_list">和田玉</view>
+                                    <view class="like_counte_list">手串</view>
+                                </view>
+                            </view>
+                            <view class="like_counte_top_right">换一换</view>
+                        </view>
+                        <view class="like_list">
+                            <view class="live_like_list">
+                                <view style="width:1000rpx;height: 270rpx;display: flex;">
+                                    <view wx:for="{{live_list}}" bindtap="goDetail" wx:key="index" style="width:200rpx;height:250rpx;margin-right:10rpx;background-color: white; border-radius: 20rpx;">
+                                        <view style="width:170rpx;height:170rpx;margin:auto;margin-top:30rpx;">
+                                            <image style="width:100%;height:100%; border-radius: 15rpx;" src="{{item}}" />
+                                        </view>
+                                        <view style="width:100%;heihgt:50rpx;font-size:32rpx; text-align: center;line-height: 50rpx;color:red;">
+                                            ￥128
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view> -->
+                <!-- <view class="tuijianStore">
+                    <view class="live_show_top">
+                        <view style="font-size:40rpx; font-weight: bold;float:left;margin-right:10rpx;">
+                            推荐店铺
+                        </view>
+                        <view style="height:60rpx;font-size:30rpx;line-height: 80rpx;color:rgba(135, 135, 135, 1);float:left;">
+                            精选店铺 等你来挑战
+                        </view>
+                        <view class="moreLive" bindtap="goStoreList">更多店铺</view>
+                    </view>
+                    <view class="tuijianStore_counte">
+                        <view class="tuijianStore_counte_top" bindtap="gostore">
+                            <view style="width:420rpx;height:100%;">
+                                <view style="width:120rpx;height:100%;float:left;margin-right:20rpx; position: relative;">
+                                    <image style="width:100%;height:100%; border-radius: 15rpx;" src="http://img4.imgtn.bdimg.com/it/u=2250800750,2031167450&fm=26&gp=0.png"></image>
+                                    <view class="store_v">V</view>
+                                </view>
+                                <view style="width:280rpx;height:100%;float:left;">
+                                    <view style="height:40rpx;font-size:33rpx;font-weight: bold;">
+                                        捞面和田玉工作室
+                                    </view>
+                                    <view style="height:20rpx;"></view>
+                                    <view style="font-size:24rpx;color:rgba(177, 177, 177, 1);">
+                                        <view style="width:30rpx;height:30rpx;float:left;color:red; margin-right:10rpx;border: 1px solid red;text-align: center;line-height: 30rpx;border-radius: 50%;">
+                                            质
+                                        </view>
+                                        质保金：20800
+                                    </view>
+                                </view>
+                            </view>
+                            <view style="width:150rpx;height:100%;">
+                                <view class="guanzhus" catchtap="guanzhus" style="{{guanZhus=='false'?' color: white;background-color: red;':' color: red;background-color: white;border: 1px solid red;'}}">
+                                    {{guanZhus=="false"? '+关注':'已关注'}}
+                                </view>
+                                <view style="font-size:24rpx;color:rgba(177, 177, 177, 1);margin-left:20rpx;margin-top:10rpx;">
+                                    102关注
+                                </view>
+                            </view>
+                        </view>
+                        <view class="tuijianStore_counte_goods">
+                            <view class="tuijianStore_counte_goods_list">
+                                <view style="width:1000rpx;height: 270rpx;display: flex;">
+                                    <view wx:for="{{live_list}}" wx:key="index" bindtap="goGood" style="width:200rpx;height:220rpx;margin-right:10rpx;background-color: white; border-radius: 20rpx;">
+                                        <view style="width:170rpx;height:170rpx;margin:auto;">
+                                            <image style="width:100%;height:100%; border-radius: 15rpx;" src="{{item}}" />
+                                        </view>
+                                        <view>
+                                            <view style="font-size:30rpx;">产品项目新上</view>
+                                            <view style="font-size:30rpx;color:red;">￥1600</view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <view style="color:rgba(177, 177, 177, 1);font-size:22rpx;float:right;margin-right:30rpx;">
+                            共160件宝贝，快去看看>
+                        </view>
+                    </view>
+                </view> -->
+                <view class="hot">
+                    <view class="live_show_top">
+                        <view style="width:100%;height:100%;line-height:120rpx; font-size:40rpx; font-weight: bold;float:left;margin-right:10rpx; text-align: center;">
+                            热门推荐
+                        </view>
+                        <view class="hotRecommend">
+                            <view class="hotRecommend_list" wx:for="{{hotRecommend}}" wx:key="index" bindtap="goGoodDetail" data-type="{{item.goods_type}}" data-id="{{item.goods_id}}">
+                                <image style="width:100%;height:300rpx;border-radius: 20rpx 20rpx 0 0 ;" mode="aspectFill" src="{{item.goods_img}}" />
+                                <view class="hotRecommend_list_text">
+                                    <view style="font-size:30rpx;font-weight: bold;white-space: nowrap; text-overflow:ellipsis; overflow:hidden">
+                                        {{item.goods_name}}
+                                    </view>
+                                    <view style=" display: flex;align-items: center;justify-content:start;">
+                                        <view style="color:red; display: flex;align-items: center;justify-content: space-around;font-size:26rpx">
+                                            <image style="width:30rpx;height:30rpx;margin-right:10rpx" mode="aspectFill" src="../../static/images/hammer.png" />
+                                            当前
+                                        </view>
+                                        <view style="font-size:32rpx;font-weight: bold;margin-left:20rpx;color:red;">
+                                            <text style="font-size:26rpx">￥</text>
+                                            {{item.goods_amount/100}}
+                                        </view>
+                                    </view>
+                                    <view class="hotRecommend_list_medal">热门</view>
+                                </view>
+                            </view>
+                            <view style="width:100%;height:50rpx;font-size:24rpx;text-align:center;line-height:50rpx;margin-top:50rpx;color:rgba(154, 154, 154, 1)">
+                                {{tabsGoods.length==0?'暂无数据~':'已经到底了~'}}
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="couponCanGet" bindtap="offCouponCanGet" wx:if="{{couponCanGet}}">
+                    <view style="width:500rpx;height:550rpx;">
+                        <image style="width:100%;" mode="widthFix" catchtap="goYouhui" src="https://www.zbq888.cn/zhen_url/image/couponCanGetss.png" />
+                        <view bindtap="offCouponCanGet" style="width:50rpx;height:50rpx; border-radius: 50%;border: 1px solid white;color:white;text-align: center;line-height: 50rpx;font-size: 40rpx  ;margin:auto;">
+                            ×
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <!-- zb -->
+            <view class="zhiBo" wx:if="{{live}}"></view>
+        </view>
+    </view>
+</view>

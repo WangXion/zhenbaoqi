@@ -1,0 +1,13 @@
+<!-- components/video-button-bar.wxml -->
+<cover-view class="icon-container">
+  <cover-view class="cover-view-item" catchtap='toolBarButton' data-buttontype="1" data-buttonname="收藏" data-itemid="{{typeid}}">
+    <cover-image class="video-icon" wx:if="{{shoucangs==0?true:false}}" src='../../../static/images/fav.png' />
+    <cover-image class="video-icon" wx:if="{{shoucangs==1?true:false}}" src='../../../static/images/faved.png' />
+  </cover-view>
+  <cover-view class="cover-view-item" catchtap='toolBarButton' data-buttontype="2" data-buttonname="消息" data-itemid="{{typeid}}">
+    <cover-image class="video-icon" src='../../../static/images/msg.png' />
+  </cover-view>
+  <cover-view class="cover-view-item" catchtap='toolBarButton' data-buttontype="3" data-buttonname="分享" data-itemid="{{typeid}}">
+    <cover-image class="video-icon" src='../../../static/images/share.png' />
+  </cover-view>
+</cover-view>

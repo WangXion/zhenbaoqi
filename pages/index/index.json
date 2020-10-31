@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-tabs": "../common/tabs2/index",
+    "i-tab": "../common/tab2/index"
+  },
+  "navigationStyle":"custom",
+  "navigationBarTextStyle": "white"
+}

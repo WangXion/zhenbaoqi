@@ -1,0 +1,19 @@
+page {
+    background-color: rgb(150, 46, 53);
+}
+
+
+.btn {
+    width: 90%;
+    height: 90rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+    text-align: center;
+    line-height: 90rpx;
+    border-radius: 45rpx;
+    position: fixed;
+    left: 5%;
+    bottom: 50rpx;
+    color: rgb(252, 247, 241);
+    background-image: linear-gradient(rgba(255, 245, 234, 1), rgba(177, 116, 52, 1));
+}

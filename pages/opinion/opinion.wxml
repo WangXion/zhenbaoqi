@@ -1,0 +1,23 @@
+<view class="opinion">
+    <view class="counter">
+        <view class="opinion_top">请填写意见描述</view>
+        <view style="width:100%;background:white;margin-top:20rpx">
+            <textarea class="weui-textarea" maxlength="300" bindinput="textareas" placeholder="请在此输入您的宝贵意见" style="width:96%;height:300rpx;margin:auto;background:white;font-size:26rpx" />
+        </view>
+        <view class="weui-textarea-counter">{{lengths}}/300</view>
+    </view>
+    <view class="up_img">
+        <view class="add_img" bindtap="addImg">
+            <image style="width:100%;height:100%;" mode="aspectFill" src="../../static/images/opinionUp.png"></image>
+        </view>
+        <view class="imgs">
+            <view class="img_list" wx:for="{{img_list}}" wx:key="index">
+                <view class="jian" data-index="{{index}}" bindtap="jianImg">
+                    <image style="width:100%;height:100%;" mode="aspectFill" src="../../static/images/jian.png"></image>
+                </view>
+                <image style="width:150rpx;height:150rpx;" mode="aspectFill" src="{{item}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="btn" bindtap="submit" style="background:{{bgColor}}">提交反馈</view>
+</view>

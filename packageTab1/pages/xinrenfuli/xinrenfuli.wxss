@@ -1,0 +1,125 @@
+page {
+    background-color: rgba(245, 245, 245, 1);
+}
+
+.top {
+    width: 100%;
+    height: 450rpx;
+    position: relative;
+}
+
+.top_tip {
+    width: 60%;
+    position: absolute;
+    bottom: -50rpx;
+    left: 20%;
+    z-index: 1000;
+}
+
+.top_text {
+    z-index: 1001;
+    width: 50%;
+    position: absolute;
+    bottom: -30rpx;
+    left: 25%;
+    font-weight: bold;
+}
+
+.counte {
+    width: 100%;
+    background-color: white;
+    padding-bottom: 40rpx;
+
+}
+
+.counte_list {
+    width: 96%;
+    margin: auto;
+    background-color: rgb(255, 227, 175);
+    border-radius: 20rpx;
+    padding-bottom: 30rpx;
+}
+
+.counte_list_detail {
+    width: 49%;
+    height: 150rpx;
+    position: relative;
+    margin-top: 30rpx;
+}
+
+.counte_list_detail_bg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.counte_list_detail_text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14rpx;
+}
+
+.counte_list_detail_text_left {
+    width: 45%;
+    height: 100%;
+    text-align: center;
+    line-height: 150rpx;
+    font-size: 24rpx;
+    color: rgb(250, 217, 137);
+    font-weight: bold;
+
+}
+
+.btn {
+    width: 80%;
+    margin: auto;
+    margin-top: 40rpx;
+}
+
+.bottom {
+    width: 100%;
+}
+
+.goods {
+    width: 100%;
+    padding-bottom: 150rpx;
+}
+
+.tab1,
+.tab2 {
+    width: 96%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tabsGoods {
+    width: 48%;
+    height: 450rpx;
+    border-radius: 20rpx;
+    margin-top: 30rpx;
+    background-color: white;
+}
+
+.grayimg {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+    width: 100%;
+    display: block;
+    margin: auto;
+}

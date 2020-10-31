@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-cells": "../common/cells/cells",
+    "mp-cell": "../common/cell/cell",
+    "mp-slideview": "../common/slideview/slideview"
+  },
+  "navigationBarTitleText": "银行卡列表"
+}

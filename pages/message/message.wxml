@@ -1,0 +1,64 @@
+<view class="message">
+    <view class="top">
+        <view class="top_navigation">
+            <image bindtap="goKefu" class="top_kf" src="../../static/images/gfkf.png" />
+            消息列表
+        </view>
+    </view>
+    <view class="category" wx:if="{{loginState==0?false:true}}">
+        <view class="category_top">
+            <view class="category_top_list" bindtap="goList" data-type="4">
+                <image style="width:100rpx;height:100rpx;dispaly:block;margin:auto" src="../../static/images/notice.png" />
+                <view>官方公告</view>
+                <view class="category_top_list_num">1</view>
+            </view>
+            <view class="category_top_list" bindtap="goList" data-type="1">
+                <image style="width:100rpx;height:100rpx;dispaly:block;;margin:auto" src="../../static/images/logistics.png" />
+                <view>交易物流</view>
+                <!-- <view class="category_top_list_num">1</view> -->
+            </view>
+            <view class="category_top_list" bindtap="goList" data-type="2">
+                <image style="width:100rpx;height:100rpx;dispaly:block;;margin:auto" src="../../static/images/earnings.png" />
+                <view>收益通知</view>
+                <!-- <view class="category_top_list_num">1</view> -->
+            </view>
+            <view class="category_top_list" bindtap="goList" data-type="3">
+                <image style="width:100rpx;height:100rpx;dispaly:block;;margin:auto" src="../../static/images/hint.png" />
+                <view>系统消息</view>
+                <!-- <view class="category_top_list_num">1</view> -->
+            </view>
+        </view>
+        <view class="empty"></view>
+        <view class="category_list">
+            <view class="category_list_detail" bindtap="goSixin" wx:for="{{contactList}}" wx:if="{{contactList.length==0?false:true}}" wx:key="index" data-conversationid="{{item.conversationID}}" data-userid="{{item.userProfile.userID}}" data-storeimg='{{item.userProfile.avatar}}'>
+                <view class="category_list_detail_q">
+                    <image src="{{item.userProfile.avatar==''?'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586943087307&di=d0323eec09d315835576ff1c1fe8d135&imgtype=0&src=http%3A%2F%2Fh.hiphotos.baidu.com%2Fzhidao%2Fwh%253D450%252C600%2Fsign%3D5204d34f78899e5178db32107797f505%2F35a85edf8db1cb132eaa3ca1de54564e93584b44.jpg':item.userProfile.avatar}}" style="width:120rpx;height:100%;border-radius:8rpx;display:block" mode="scaleToFill" />
+                    <view class="category_list_detail_q_right">
+                        <view class="category_list_detail_q_right_top">
+                            <view style="width:200rpx;font-size:30rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{item.userProfile.nick}}</view>
+                            <view style="font-size:24rpx;color: rgba(173, 173, 173, 1);">
+                                {{item.lastMessage.lastTime}}
+                            </view>
+                        </view>
+                        <view style="font-size:28rpx;color:rgba(102, 102, 102, 1);width:70%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+                            {{item.lastMessage.messageForShow}}
+                        </view>
+                    </view>
+                    <!-- 未读数量 -->
+                    <!-- <view class="UnreadMsgCount" wx:if="{{item.UnreadMsgCount==0?false:true}}">
+                        {{item.UnreadMsgCount}}
+                    </view> -->
+                </view>
+            </view>
+            <view class="none" wx:if="{{contactList.length==0?true:false}}">暂无消息~</view>
+        </view>
+    </view>
+    <view class="noLogin" wx:if="{{loginState==0?true:false}}">
+        <view style="width:100%;height:100rpx;font-size:30rpx;text-align: center;line-height: 100rpx;font-weight: bold;margin-top:40%">
+            您还未登录,请登录后使用此功能
+        </view>
+        <view bindtap="goLogin" style="width:140rpx;height:60rpx;margin:auto;font-size:34rpx;text-align: center;line-height: 60rpx;background-color: rgb(253, 55, 55);color:white; border-radius: 30rpx;margin-top:50rpx;">
+            登录
+        </view>
+    </view>
+</view>

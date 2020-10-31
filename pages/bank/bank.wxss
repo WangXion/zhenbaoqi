@@ -1,0 +1,39 @@
+page {
+    background-color: rgba(243, 243, 243, 1);
+}
+
+.bank_list {
+    width: 94%;
+    height: 200rpx;
+    margin: auto;
+    background-color: white;
+    margin-top: 30rpx;
+    border-radius: 20rpx;
+}
+
+.bank_list_top {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 30rpx;
+    margin-left: 40rpx;
+}
+
+.btns {
+    width: 92%;
+    height: 100rpx;
+    font-size: 32rpx;
+    text-align: center;
+    line-height: 100rpx;
+    color: white;
+    background-color: rgba(4, 202, 211, 1);
+    border-radius: 8rpx;
+    position: fixed;
+    left: 4%;
+    top: 10%
+}
+
+.btn {
+    height: 200rpx;
+    line-height: 200rpx;
+}
